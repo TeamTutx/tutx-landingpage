@@ -1,7 +1,6 @@
 'use client';
 import * as React from 'react';
 
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useThemeContext } from '@/context/theme-data-provider';
 import { useTheme } from 'next-themes';
 import { cn } from '@/lib/utils';
@@ -16,33 +15,38 @@ const availableThemeColors = [
   { name: 'Orange', light: 'bg-orange-500', dark: 'bg-orange-700' }
 ];
 
-export function ThemeToggle() {
+export function ThemeOptions() {
   const { themeColor, setThemeColor } = useThemeContext();
   const { setTheme, theme } = useTheme();
 
-  const createSelectItems = () => {
+  const createButtons = () => {
     return availableThemeColors.map(({ name, light, dark }) => (
-      <SelectItem key={name} value={name}>
-        <div className="">
+      <Button
+        variant="ghost"
+        key={name}
+        className={cn('rounded-full', 'mx-2', 'px-2', name === themeColor ? 'border' : 'border-none')}
+        onClick={() => setThemeColor(name as ThemeColors)}
+      >
+        <div>
           <div className={cn('rounded-full', 'w-[20px]', 'h-[20px]', theme === 'light' ? light : dark)}></div>
         </div>
-      </SelectItem>
+      </Button>
     ));
   };
 
   return (
-    <>
-      <Button variant="ghost" className="px-2 ml-2 mr-1" size="icon" onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}>
+    <div className="flex justify-center">
+      <Button
+        variant="ghost"
+        className="ml-2 mr-1 px-2"
+        size="icon"
+        onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} // Toggle theme between light and dark
+      >
         <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
         <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         <span className="sr-only">Toggle theme</span>
       </Button>
-      <Select value={themeColor} onValueChange={(value) => setThemeColor(value as ThemeColors)} defaultValue={themeColor}>
-        <SelectTrigger className="ml-1 border-none p-0 ring-offset-transparent focus:ring-transparent" rightIcon={false}>
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent className="min-w-0 border-muted">{createSelectItems()}</SelectContent>
-      </Select>
-    </>
+      {createButtons()}
+    </div>
   );
 }

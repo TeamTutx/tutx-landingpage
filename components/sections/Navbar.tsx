@@ -3,8 +3,8 @@
 import * as React from 'react';
 import Link from 'next/link';
 import TutxBlack from '@/public/tutx';
-import { Button } from '../ui/button';
-import { ThemeToggle } from '../custom/theme-toggle';
+import { Button } from '@/components/ui/button';
+import { ThemeToggle } from '@/components/custom/theme-toggle';
 
 import { cn } from '@/lib/utils';
 
