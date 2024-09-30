@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 
 export default function TemplateB() {
   return (
-<div className="min-h-[600px] w-full bg-primary/90 px-28 pt-16">
+<div className="w-full bg-primary/90 px-28 pt-16 pb-8">
   <div className="text-4xl font-extrabold leading-tight text-white/80 dark:text-black/80">
     Build it better with Appcues
   </div>
@@ -34,7 +34,7 @@ export default function TemplateB() {
   </div>
 
   <div className="mt-10 flex justify-end relative">
-    <Undo size={64} className="text-white/80 dark:text-black/80 rotate-180"/>
+    <Undo size={64} className="text-white/80 dark:text-black/80 rotate-180 mr-4"/>
     <Button className="bg-white dark:bg-black text-primary font-bold custom-button-transition hover:bg-white">See how easy it is</Button>
   </div>
 </div>
