@@ -7,7 +7,7 @@ import { Button } from '../ui/button';
 import { ThemeToggle } from '../custom/theme-toggle';
 
 import { cn } from '@/lib/utils';
-// import { Icons } from "@/components/icons"
+
 import {
   NavigationMenu,
   NavigationMenuContent,
@@ -54,7 +54,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <div className="py-3">
+    <div className="py-4">
       <div className="flex justify-between">
         <div className="">
           <TutxBlack className="h-10"></TutxBlack>
@@ -118,7 +118,7 @@ export function Navbar() {
           </NavigationMenu>
         </div>
         <div className="flex">
-          <Button className="bg-primary text-white dark:text-black">Book a Demo</Button>
+          <Button className="dark:text-black">Book a Demo</Button>
           <ThemeToggle></ThemeToggle>
         </div>
       </div>
