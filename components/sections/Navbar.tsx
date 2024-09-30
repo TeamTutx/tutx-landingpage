@@ -54,10 +54,10 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <div className="py-4">
+    <div className="py-4 max-w-7xl mx-auto">
       <div className="flex justify-between">
         <div className="">
-          <TutxBlack className="h-10"></TutxBlack>
+          <TutxBlack className="h-10" showText={true}></TutxBlack>
         </div>
         <div>
           <NavigationMenu>

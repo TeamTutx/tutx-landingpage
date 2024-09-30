@@ -3,7 +3,7 @@ import { BadgeCheck, MoveRight } from 'lucide-react';
 
 export default function Hero() {
   return (
-    <div className="mt-20 flex min-h-[525px] px-10">
+    <div className="mt-20 flex min-h-[525px] px-10 max-w-7xl mx-auto">
       <div className="w-2/5">
         <div className="text-[50px] font-extrabold leading-tight">Product adoption made easy</div>
         <div className="mt-8 text-muted-foreground">Design, deploy, and test captivating onboarding experiences in minutes, not weeks.</div>

@@ -2,7 +2,7 @@ import { Frame, TrendingUp, CodeSquare, Feather, Hexagon, ShieldHalf } from 'luc
 
 export default function TemplateA() {
   return (
-    <div className='my-16 px-10'>
+    <div className='my-16 px-10 max-w-7xl mx-auto'>
       <div className='uppercase text-[11px] tracking-wider font-medium'>Join 1,500+ other scaling product-led organizations that are leading with experience</div>
       <div className='my-8 flex space-x-28'>
         <div>
