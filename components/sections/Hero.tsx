@@ -8,7 +8,7 @@ export default function Hero() {
         <div className="text-[50px] font-extrabold leading-tight">Product adoption made easy</div>
         <div className="mt-8 text-muted-foreground">Design, deploy, and test captivating onboarding experiences in minutes, not weeks.</div>
 
-        <div className="my-8 space-y-2 text-sm">
+        <div className="my-8 space-y-2 text-sm ">
           <div className="flex items-center">
             <BadgeCheck className="mr-3 inline text-primary" strokeWidth={1.2} size={20} />
             BOOST ACTIVATION WITH TAILORED ONBOARDING
