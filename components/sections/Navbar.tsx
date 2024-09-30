@@ -54,10 +54,11 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <div className="py-4 max-w-7xl mx-auto">
-      <div className="flex justify-between">
+    <div className="py-4 sticky top-0 backdrop-blur-[25px] z-50 border-b border-primary/5">
+    {/* <div className="py-4 sticky top-0 bg-background z-50"> */}
+      <div className="flex max-w-7xl mx-auto justify-between">
         <div className="">
-          <TutxBlack className="h-10" showText={true}></TutxBlack>
+          <TutxBlack className="h-10"></TutxBlack>
         </div>
         <div>
           <NavigationMenu>
