@@ -6,10 +6,11 @@ export default function TemplateE() {
       <div className="w-1/2 pr-16">
         <div className="text-4xl font-extrabold leading-tight">Set priorities based on user feedback and insight</div>
         <div className="mt-8 text-sm text-muted-foreground">
-        Improve your product and user experience using insights collected from in-app surveys and NPS—there’s no better place to capture feedback!
+          Improve your product and user experience using insights collected from in-app surveys and NPS—there’s no better place to capture
+          feedback!
         </div>
 
-        <div className="my-8 space-y-4 uppercase text-sm">
+        <div className="my-8 space-y-4 text-sm uppercase">
           <div className="flex items-center">
             <MonitorCheck className="mr-3 inline text-primary" size={20} />
             improve nps

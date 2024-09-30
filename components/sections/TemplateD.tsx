@@ -1,4 +1,3 @@
-
 import { Megaphone, ChartColumnStacked, UserPlus, MoveRight } from 'lucide-react';
 
 export default function TemplateD() {
@@ -14,7 +13,7 @@ export default function TemplateD() {
           have yet to try. And you can improve adoption and see your impact directly in Appcues—again, no engineering needed!
         </div>
 
-        <div className="my-8 space-y-4 uppercase text-sm">
+        <div className="my-8 space-y-4 text-sm uppercase">
           <div className="flex items-center">
             <Megaphone className="mr-3 inline text-primary" size={20} />
             Announce features

@@ -1,4 +1,5 @@
 import { ThemeOptions } from '@/components/custom/theme-options';
+import { Button } from '@/components/ui/button';
 
 export default function TemplateF() {
   return (
@@ -15,7 +16,11 @@ export default function TemplateF() {
       <div className='pt-4'>
           <ThemeOptions />
       </div>
-      <div className='h-96 w-1/2 bg-white dark:bg-black mt-16 rounded-2xl'></div>
+      <div className='h-96 w-1/2 bg-white dark:bg-black mt-16 rounded-2xl flex justify-center items-center'>
+      <Button className='text-white dark:text-black'>
+        Themes
+      </Button>
+      </div>
     </div>
   );
 }

@@ -21,8 +21,8 @@ export default function TemplateC() {
       <div className="flex w-3/5 items-center justify-center text-muted-foreground">
         <div className="w-3/4 space-y-6">
           <div>
-            Guide users to unlock the value of your product faster. Rather than being frustrated, they&apos;ll want to explore more. And with the
-            adoption of additional features comes higher engagement and more continuous use of your product.
+            Guide users to unlock the value of your product faster. Rather than being frustrated, they&apos;ll want to explore more. And
+            with the adoption of additional features comes higher engagement and more continuous use of your product.
           </div>
           <div>
             Your users go from evaluators to champions. Free-to-paid conversion goes up. Expansion and upsells go up. And retention goes up.

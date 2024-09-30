@@ -54,11 +54,10 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <div className="py-4 sticky top-0 backdrop-blur-[25px] z-50 border-b border-primary/5">
-    {/* <div className="py-4 sticky top-0 bg-background z-50"> */}
-      <div className="flex max-w-7xl mx-auto justify-between">
+    <div className="sticky top-0 z-50 border-b border-primary/5 py-4 backdrop-blur-[25px]">
+      <div className="mx-auto flex max-w-7xl justify-between">
         <div className="">
-          <TutxBlack className="h-10"></TutxBlack>
+          <TutxBlack className="h-10" showText={true}></TutxBlack>
         </div>
         <div>
           <NavigationMenu>
@@ -108,6 +107,11 @@ export function Navbar() {
               <NavigationMenuItem>
                 <Link href="/" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Themes</NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem>
+                <Link href="/" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>Our Story</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
