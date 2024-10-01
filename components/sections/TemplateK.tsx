@@ -21,7 +21,7 @@ export default function Templatek() {
           hello@teamtutx.com
         </div>
       </div>
-      <div className="w-1/2 px-10">
+      <div className="flex w-1/2 items-center px-10">
         <form className="space-y-4">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>

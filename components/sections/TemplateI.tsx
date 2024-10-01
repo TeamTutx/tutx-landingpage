@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import { PinContainer } from '../ui/3d-pin';
+import { PinContainer } from '@/components/ui/3d-pin';
 import Image from 'next/image';
 import { MoveRight } from 'lucide-react';
 

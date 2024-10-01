@@ -3,7 +3,6 @@
 import * as React from 'react';
 import Link from 'next/link';
 import TutxBlack from '@/public/tutx';
-import { Button } from '@/components/ui/button';
 import { ThemeToggle } from '@/components/custom/theme-toggle';
 
 import { cn } from '@/lib/utils';
@@ -17,6 +16,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu';
+import RocketButton from '@/components/ui/rocket-button';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -123,7 +123,7 @@ export function Navbar() {
           </NavigationMenu>
         </div>
         <div className="flex">
-          <Button className="dark:text-black">Book a Demo</Button>
+          <RocketButton />
           <ThemeToggle></ThemeToggle>
         </div>
       </div>
