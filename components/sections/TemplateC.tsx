@@ -1,20 +1,15 @@
+'use client';
+import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
+
+const words = `Your product experience is being judged`;
+
 export default function TemplateC() {
   return (
     <div className="flex min-h-[400px] bg-primary/5">
       <div className="flex w-2/5">
         <div className="flex items-center justify-center text-5xl font-extrabold leading-tight">
           <div className="w-3/4 text-center">
-            <span>Your </span>
-            <span className="relative inline-block text-primary/80">
-              <span className="absolute inset-x-0 bottom-0 h-1/2 bg-primary/20"></span>
-              product
-            </span>
-            <span> </span>
-            <span className="relative inline-block text-primary/80">
-              <span className="absolute inset-x-0 bottom-0 h-1/2 bg-primary/20"></span>
-              experience
-            </span>
-            <span> is being judged</span>
+            <TextGenerateEffect words={words} className="text-5xl font-extrabold leading-tight" highlights={['product', 'experience']} />
           </div>
         </div>
       </div>
