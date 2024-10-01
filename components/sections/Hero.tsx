@@ -26,7 +26,7 @@ export default function Hero() {
         </div>
 
         <div className="mt-12 flex items-center space-x-6">
-          <StepLoader/>
+          <StepLoader />
         </div>
       </div>
       <div className="w-3/5 bg-primary/15"></div>

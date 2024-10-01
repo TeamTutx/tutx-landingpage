@@ -1,10 +1,13 @@
 import { Megaphone, ChartColumnStacked, UserPlus, MoveRight } from 'lucide-react';
+import ParallexCard from '../custom/parallex-card';
 
 export default function TemplateD() {
   return (
     <div className="mx-auto mt-32 flex min-h-[525px] max-w-7xl px-10">
       <div className="w-1/2 pr-16">
-        <div className="h-full bg-primary/15"></div>
+        <div className="scale-125">
+          <ParallexCard type="grid" src="/dashboard.png" />
+        </div>
       </div>
       <div className="w-1/2 px-16">
         <div className="text-4xl font-extrabold leading-tight">Drive growth through sticky, engaged users</div>

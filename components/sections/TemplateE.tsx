@@ -1,4 +1,5 @@
 import { MonitorCheck, MessageCircle, Lightbulb, MoveRight } from 'lucide-react';
+import ParallexCard from '../custom/parallex-card';
 
 export default function TemplateE() {
   return (
@@ -34,7 +35,9 @@ export default function TemplateE() {
         </div>
       </div>
       <div className="w-1/2 px-16">
-        <div className="h-full bg-primary/15"></div>
+        <div className="scale-125">
+          <ParallexCard type="dot" src="/dashboard.png" />
+        </div>
       </div>
     </div>
   );

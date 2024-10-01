@@ -19,7 +19,7 @@ export default function TemplateF() {
         {/* <ThemeOptions /> */}
         <Dock />
       </div>
-      <Macbook/>
+      <Macbook />
     </div>
   );
 }
