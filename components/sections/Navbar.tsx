@@ -54,7 +54,7 @@ const components: { title: string; href: string; description: string }[] = [
 
 export function Navbar() {
   return (
-    <div className="sticky top-0 z-50 border-b border-primary/5 py-4 backdrop-blur-[25px]">
+    <div className="sticky top-0 z-[100] border-b border-primary/5 py-4 backdrop-blur-[25px]">
       <div className="mx-auto flex max-w-7xl justify-between">
         <div className="">
           <TutxBlack className="h-10" showText={true}></TutxBlack>
