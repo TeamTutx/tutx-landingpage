@@ -38,7 +38,7 @@ export function ThemeOptions() {
     <div className="flex justify-center">
       <Button
         variant="ghost"
-        className="ml-2 mr-1 px-2"
+        className="ml-2 mr-1 rounded-full px-2"
         size="icon"
         onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')} // Toggle theme between light and dark
       >

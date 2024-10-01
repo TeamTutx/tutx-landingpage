@@ -16,7 +16,7 @@ import {
   NavigationMenuTrigger,
   navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu';
-import RocketButton from '@/components/ui/rocket-button';
+import RocketButton from '@/components/custom/rocket-button';
 
 const components: { title: string; href: string; description: string }[] = [
   {

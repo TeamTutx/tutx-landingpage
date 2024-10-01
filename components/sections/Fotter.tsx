@@ -1,5 +1,5 @@
 import TutxBlack from '@/public/tutx';
-import { Linkedin, Mail, MailPlus } from 'lucide-react';
+import { Linkedin, Mail } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
