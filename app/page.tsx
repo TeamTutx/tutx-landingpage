@@ -8,7 +8,8 @@ import TemplateD from '@/components/sections/TemplateD';
 import TemplateE from '@/components/sections/TemplateE';
 import TemplateF from '@/components/sections/TemplateF';
 import TemplateG from '@/components/sections/TemplateG';
-import TemplateH from '@/components/sections/TemplateH';
+import { TemplateH } from '@/components/sections/TemplateH';
+import TemplateI from '@/components/sections/TemplateI';
 
 export default function Home() {
   return (
@@ -23,6 +24,7 @@ export default function Home() {
       <TemplateF />
       <TemplateG />
       <TemplateH />
+      <TemplateI />
       <Footer />
     </div>
   );

@@ -22,22 +22,9 @@ export default function TemplateG() {
   ];
 
   return (
-    <div className="flex flex-col items-center space-y-10 py-16 min-h-[400px]">
+    <div className="flex flex-col items-center space-y-10 py-16">
       <div className="flex">
         <div className="flex items-center justify-center text-5xl font-extrabold leading-tight">
-          {/* <div className="w-3/4 text-center">
-            <span>Your </span>
-            <span className="relative inline-block text-primary/80">
-              <span className="absolute inset-x-0 bottom-0 h-1/2 bg-primary/20"></span>
-              product
-            </span>
-            <span> </span>
-            <span className="relative inline-block text-primary/80">
-              <span className="absolute inset-x-0 bottom-0 h-1/2 bg-primary/20"></span>
-              experience
-            </span>
-            <span> is being judged</span>
-          </div> */}
           <TypewriterEffectSmooth words={words} />
         </div>
       </div>
