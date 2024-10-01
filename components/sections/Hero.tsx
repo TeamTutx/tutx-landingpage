@@ -6,7 +6,7 @@ export default function Hero() {
     <div className="mx-auto mt-20 flex min-h-[525px] max-w-7xl px-10">
       <div className="w-2/5">
         <div className="text-[50px] font-extrabold leading-tight">Product adoption made easy</div>
-        <div className="mt-8 text-muted-foreground">Design, deploy, and test captivating onboarding experiences in minutes, not weeks.</div>
+        <div className="mt-8 text-muted-foreground text-sm pr-20">Design, deploy, and test captivating onboarding experiences in minutes, not weeks.</div>
 
         <div className="my-8 space-y-2 text-sm">
           <div className="flex items-center">
@@ -24,7 +24,7 @@ export default function Hero() {
         </div>
 
         <div className="mt-12 flex items-center space-x-6">
-          <Button className="custom-button-transition dark:text-black">Start Building for Free</Button>
+          {/* <Button className="custom-button-transition dark:text-black">Start Building for Free</Button> */}
           <div className="group flex cursor-pointer items-center text-primary">
             Get a demo
             <MoveRight

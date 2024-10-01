@@ -41,7 +41,7 @@ export function ThemeToggle() {
         <SelectTrigger className="ml-1 border-none p-0 ring-offset-transparent focus:ring-transparent" rightIcon={false}>
           <SelectValue />
         </SelectTrigger>
-        <SelectContent className="min-w-0 border-muted">{createSelectItems()}</SelectContent>
+        <SelectContent className="min-w-0 border-muted z-[110] -translate-x-2">{createSelectItems()}</SelectContent>
       </Select>
     </>
   );
