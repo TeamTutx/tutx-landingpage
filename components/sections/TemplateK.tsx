@@ -6,7 +6,7 @@ import { Label } from '@/components/ui/label';
 
 export default function Templatek() {
   return (
-    <div className="mx-auto flex max-w-7xl px-16 py-36">
+    <div className="mx-auto flex max-w-7xl px-16 py-36" id="demo">
       <div className="w-1/2 space-y-10 pr-20">
         <div className="font-bold text-primary">BOOK A DEMO</div>
 

@@ -1,4 +1,5 @@
-import { BadgeCheck, MoveRight } from 'lucide-react';
+import { BadgeCheck } from 'lucide-react';
+import StepLoader from '../custom/loader';
 
 export default function Hero() {
   return (
@@ -25,14 +26,7 @@ export default function Hero() {
         </div>
 
         <div className="mt-12 flex items-center space-x-6">
-          {/* <Button className="custom-button-transition dark:text-black">Start Building for Free</Button> */}
-          <div className="group flex cursor-pointer items-center text-primary">
-            Get a demo
-            <MoveRight
-              className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
-              strokeWidth={1}
-            />
-          </div>
+          <StepLoader/>
         </div>
       </div>
       <div className="w-3/5 bg-primary/15"></div>
