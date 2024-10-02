@@ -5,24 +5,23 @@ export default function TemplateE() {
   return (
     <div className="mx-auto mt-32 flex min-h-[525px] max-w-7xl px-10">
       <div className="w-1/2 pr-16">
-        <div className="text-4xl font-extrabold leading-tight">Set priorities based on user feedback and insight</div>
+        <div className="text-4xl font-extrabold leading-tight">Lorem ipsum odor amet, consectetuer</div>
         <div className="mt-8 text-sm text-muted-foreground">
-          Improve your product and user experience using insights collected from in-app surveys and NPS—there’s no better place to capture
-          feedback!
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Hac integer in condimentum nisl, sociosqu vivamus nullam ullamcorper. Quisque
         </div>
 
         <div className="my-8 space-y-4 text-sm uppercase">
           <div className="flex items-center">
             <MonitorCheck className="mr-3 inline text-primary" size={20} />
-            improve nps
+            LOREM IPSUM
           </div>
           <div className="flex items-center">
             <MessageCircle className="mr-3 inline text-primary" size={20} />
-            Increase feedback
+            LOREM IPSUM euismod
           </div>
           <div className="flex items-center">
             <Lightbulb className="mr-3 inline text-primary" size={20} />
-            Collect insights
+            LOREM IPSUM ODOR
           </div>
         </div>
 

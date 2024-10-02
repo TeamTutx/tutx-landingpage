@@ -7,10 +7,13 @@ export default function TemplateG() {
       text: 'Build'
     },
     {
-      text: 'awesome'
+      text: 'your'
     },
     {
-      text: 'apps'
+      text: 'own'
+    },
+    {
+      text: 'institute'
     },
     {
       text: 'with'

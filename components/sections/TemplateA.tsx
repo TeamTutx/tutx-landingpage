@@ -4,7 +4,7 @@ export default function TemplateA() {
   return (
     <div className="mx-auto my-16 max-w-7xl px-10">
       <div className="text-[11px] font-medium uppercase tracking-wider">
-        Join 1,500+ other scaling product-led organizations that are leading with experience
+        LOREM IPSUM ODOR AMET, CONSECTETUER ADIPISCING ELIT. NON FACILISIS PORTTITOR.
       </div>
       <div className="my-8 flex space-x-28">
         <div>

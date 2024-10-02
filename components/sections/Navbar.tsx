@@ -22,22 +22,22 @@ const components: { title: string; href: string; description: string }[] = [
   {
     title: 'Alert Dialog',
     href: '//primitives/alert-dialog',
-    description: 'A modal dialog that interrupts the user with important content and expects a response.'
+    description: 'Lorem ipsum odor amet, consectetuer adipiscing elit.'
   },
   {
     title: 'Hover Card',
     href: '//primitives/hover-card',
-    description: 'For sighted users to preview content available behind a link.'
+    description: 'Lorem ipsum Porttitor accumsan diam enim sociosqu facilisis sodales inceptos ullamcorper.'
   },
   {
     title: 'Progress',
     href: '//primitives/progress',
-    description: 'Displays an indicator showing the completion progress of a task, typically displayed as a progress bar.'
+    description: 'Lorem ipsum odor amet, consectetuer adipiscing elit.'
   },
   {
     title: 'Scroll-area',
     href: '//primitives/scroll-area',
-    description: 'Visually or semantically separates content.'
+    description: 'Lorem ipsum sem porta proin natoque morbi volutpat at elit sit.'
   },
   {
     title: 'Tabs',
@@ -72,22 +72,22 @@ export function Navbar() {
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           href="/"
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium">shadcn/ui</div>
+                          <div className="mb-2 mt-4 text-lg font-medium">tutx</div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            Beautifully designed components that you can copy and paste into your apps. Accessible. Customizable. Open
-                            Source.
+                            Lorem ipsum odor amet, consectetuer adipiscing elit. Quam nisl accumsan hendrerit orci netus ac ipsum libero.
+                            Pellentesque nunc quisque
                           </p>
                         </a>
                       </NavigationMenuLink>
                     </li>
                     <ListItem href="/" title="Introduction">
-                      Re-usable components built using Radix UI and Tailwind CSS.
+                      Lorem ipsum odor amet, consectetuer adipiscing elit.
                     </ListItem>
                     <ListItem href="/" title="Installation">
-                      How to install dependencies and structure your app.
+                      Lorem ipsum raesent libero. Sed cursus ante dapibus diam.
                     </ListItem>
-                    <ListItem href="/" title="Typography">
-                      Styles for headings, paragraphs, lists...etc
+                    <ListItem href="/" title="Support">
+                      Lorem ipsum consectetuer adipiscing elit.
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>

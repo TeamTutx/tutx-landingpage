@@ -6,23 +6,23 @@ export default function Hero() {
   return (
     <div className="mx-auto mt-20 flex min-h-[525px] max-w-7xl px-10">
       <div className="w-2/5">
-        <div className="text-[50px] font-extrabold leading-tight">Product adoption made easy</div>
+        <div className="text-[50px] font-extrabold leading-tight">Lorem ipsum odor amet, consecte</div>
         <div className="mt-8 pr-20 text-sm text-muted-foreground">
-          Design, deploy, and test captivating onboarding experiences in minutes, not weeks.
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Non facilisis porttitor.
         </div>
 
         <div className="my-8 space-y-2 text-sm">
           <div className="flex items-center">
             <BadgeCheck className="mr-3 inline text-primary" strokeWidth={1.2} size={20} />
-            BOOST ACTIVATION WITH TAILORED ONBOARDING
+            LOREM IPSUM ODOR AMET, CONSECTETUER ELIT
           </div>
           <div className="flex items-center">
             <BadgeCheck className="mr-3 inline text-primary" strokeWidth={1.2} size={20} />
-            IMPROVE CONVERSION BY REDUCING TIME TO VALUE
+            LOREM IPSUM ODOR AMET, CONSECTETUER
           </div>
           <div className="flex items-center">
             <BadgeCheck className="mr-3 inline text-primary" strokeWidth={1.2} size={20} />
-            CREATE STICKINESS WITH FEATURE ADOPTION
+            LOREM IPSUM ODOR AMET, CONSECTETUER ADIPISCING
           </div>
         </div>
 
@@ -30,8 +30,8 @@ export default function Hero() {
           <StepLoader />
         </div>
       </div>
-      <div className="w-3/5 flex items-center justify-center">
-      <ViewTabs />
+      <div className="flex w-3/5 items-center justify-center">
+        <ViewTabs />
       </div>
     </div>
   );

@@ -4,7 +4,7 @@ import { Button } from '@/components/ui/button';
 export default function TemplateB() {
   return (
     <div className="w-full bg-primary/90 px-28 pb-8 pt-16">
-      <div className="text-4xl font-extrabold leading-tight text-white/80 dark:text-black/80">Build it better with Appcues</div>
+      <div className="text-4xl font-extrabold leading-tight text-white/80 dark:text-black/80">Build it better with Tutx</div>
 
       <div className="mt-16 grid h-72 grid-cols-3 gap-6">
         <div className="relative rounded-xl bg-primary/60 text-white/80 dark:text-black/80">
@@ -12,8 +12,8 @@ export default function TemplateB() {
             <FlaskConical size={36} className="mt-12" />
             <div className="text-center font-semibold">Getting started is a piece of cake</div>
             <div className="px-6 text-center">
-              Quickly build and iterate on in-app experiences that impact user behavior — no setup friction, no engineering support, no
-              hassle.
+              Lorem ipsum odor amet, consectetuer adipiscing elit. Ex sollicitudin nullam sed vivamus at convallis malesuada convallis a.
+              Tortor inceptos neque quis ex.
             </div>
           </div>
         </div>
@@ -22,8 +22,8 @@ export default function TemplateB() {
             <Pipette size={36} className="mt-12" />
             <div className="text-center font-semibold">Personalization, at scale</div>
             <div className="px-6 text-center">
-              Target experiences to the right users, at the right time, with detailed reporting to measure impact on key segments, like
-              trialers or new users.
+              Lorem Ipsum consequat eu euismod curabitur cubilia, ullamcorper lorem suscipit sapien. Eget pretium fermentum viverra ligula
+              odio purus. Justo class netus varius finibus id.
             </div>
           </div>
         </div>
@@ -32,7 +32,8 @@ export default function TemplateB() {
             <TestTube size={36} className="mt-12" />
             <div className="text-center font-semibold">Structured for your success</div>
             <div className="px-6 text-center">
-              A trusted, reliable partner with the expertise, resources, and track record to help you confidently reach your goals.
+              Lorem Ipsum Iaculis tempus convallis consectetur vitae efficitur cubilia lorem. Penatibus aliquam condimentum lectus vel
+              dignissim, vulputate diam vestibulum nec.
             </div>
           </div>
         </div>

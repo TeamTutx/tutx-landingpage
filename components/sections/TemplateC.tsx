@@ -1,7 +1,7 @@
 'use client';
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 
-const words = `Your product experience is being judged`;
+const words = `Lorem ipsum odor amet, consectetuer`;
 
 export default function TemplateC() {
   return (
@@ -9,23 +9,21 @@ export default function TemplateC() {
       <div className="flex w-2/5">
         <div className="flex items-center justify-center text-5xl font-extrabold leading-tight">
           <div className="w-3/4 text-center">
-            <TextGenerateEffect words={words} className="text-5xl font-extrabold leading-tight" highlights={['product', 'experience']} />
+            <TextGenerateEffect words={words} className="text-5xl font-extrabold leading-tight" highlights={['ipsum', 'consectetuer']} />
           </div>
         </div>
       </div>
       <div className="flex w-3/5 items-center justify-center text-muted-foreground">
         <div className="w-3/4 space-y-6">
           <div>
-            Guide users to unlock the value of your product faster. Rather than being frustrated, they&apos;ll want to explore more. And
-            with the adoption of additional features comes higher engagement and more continuous use of your product.
+            Lorem ipsum odor amet, consectetuer adipiscing elit. Hac integer in condimentum nisl, sociosqu vivamus nullam ullamcorper.
+            Quisque netus elementum euismod ullamcorper dictum.
           </div>
           <div>
-            Your users go from evaluators to champions. Free-to-paid conversion goes up. Expansion and upsells go up. And retention goes up.
+            orta aptent porttitor nibh efficitur morbi volutpat nunc. Erat vulputate tempor nibh in convallis dui tempor dictum. Lacus
+            pharetra lacinia velit eleifend litora. Pellentesque velit mauris laoreet placerat fermentum quam habitant nibh.
           </div>
-          <div>
-            And the best part? You can achieve all of this without having to interrupt an engineering sprint or rely solely on costly
-            one-on-one support.
-          </div>
+          <div>Enim arcu torquent turpis maximus nulla. Neque enim maximus lacinia nibh, penatibus erat erat faucibus massa.</div>
         </div>
       </div>
     </div>

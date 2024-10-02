@@ -19,13 +19,13 @@ export default function TemplateI() {
       </div>
 
       <PinContainer
-        title="/ui.aceternity.com"
+        title="/linkedin.com"
         href="https://www.linkedin.com/pulse/days-2425180-building-tutx-debounce-supril-singh-tnvrf/"
       >
         <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight text-black dark:text-white/50 sm:basis-1/2">
           <h3 className="!m-0 max-w-xs !pb-2 text-base font-bold text-black dark:text-white">Debounce</h3>
           <div className="!m-0 !p-0 text-base font-normal">
-            <span className="text-muted-foreground">Customizable Tailwind CSS and Framer Motion Components.</span>
+            <span className="text-muted-foreground">Lacus pharetra lacinia velit eleifend lacinia litora.</span>
           </div>
           <div className="mt-4 flex h-48 w-full flex-1 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary via-primary to-primary sm:rounded-tl-lg sm:rounded-tr-lg">
             <Image
@@ -40,11 +40,11 @@ export default function TemplateI() {
         </div>
       </PinContainer>
 
-      <PinContainer title="/ui.aceternity.com" href="https://www.linkedin.com/pulse/day-7-8180-building-tutx-supril-singh-uvzxf/">
+      <PinContainer title="/linkedin.com" href="https://www.linkedin.com/pulse/day-7-8180-building-tutx-supril-singh-uvzxf/">
         <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight sm:basis-1/2">
           <h3 className="!m-0 max-w-xs !pb-2 text-base font-bold text-black dark:text-white">TanStack</h3>
           <div className="!m-0 !p-0 text-base font-normal">
-            <span className="text-muted-foreground">Customizable Tailwind CSS and Framer Motion Components.</span>
+            <span className="text-muted-foreground">Neque enim maximus lacinia nibh, penatibus erat erat faucibus massa.</span>
           </div>
           <div className="mt-4 flex h-48 w-full flex-1 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary via-primary to-primary sm:rounded-tl-lg sm:rounded-tr-lg">
             <Image

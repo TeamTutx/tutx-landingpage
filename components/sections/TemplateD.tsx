@@ -10,24 +10,24 @@ export default function TemplateD() {
         </div>
       </div>
       <div className="w-1/2 px-16">
-        <div className="text-4xl font-extrabold leading-tight">Drive growth through sticky, engaged users</div>
+        <div className="text-4xl font-extrabold leading-tight">Lorem ipsum odor amet, consectetuer adipiscing.</div>
         <div className="mt-8 text-sm text-muted-foreground">
-          Use slideouts, tooltips, and hotspots to drive awareness and adoption of new features or nudge users to discover features they
-          have yet to try. And you can improve adoption and see your impact directly in Appcues—again, no engineering needed!
+          Lorem ipsum odor amet, consectetuer adipiscing elit. Hac integer in condimentum nisl, sociosqu vivamus nullam ullamcorper. Quisque
+          netus elementum euismod ullamcorper dictum. Porta aptent porttitor nibh efficitur morbi volutpat nunc.
         </div>
 
         <div className="my-8 space-y-4 text-sm uppercase">
           <div className="flex items-center">
             <Megaphone className="mr-3 inline text-primary" size={20} />
-            Announce features
+            LOREM IPSUM ODOR
           </div>
           <div className="flex items-center">
             <ChartColumnStacked className="mr-3 inline text-primary" size={20} />
-            Increase usage
+            LOREM IPSUM dictum
           </div>
           <div className="flex items-center">
             <UserPlus className="mr-3 inline text-primary" size={20} />
-            Improve retention
+            LOREM IPSUM
           </div>
         </div>
 
