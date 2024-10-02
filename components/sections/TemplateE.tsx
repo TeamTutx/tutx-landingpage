@@ -36,7 +36,7 @@ export default function TemplateE() {
       </div>
       <div className="w-1/2 px-16">
         <div className="scale-125">
-          <ParallexCard type="dot" src="/dashboard.png" />
+          <ParallexCard type="dot" src="/web.png" />
         </div>
       </div>
     </div>

@@ -6,7 +6,7 @@ export default function TemplateD() {
     <div className="mx-auto mt-32 flex min-h-[525px] max-w-7xl px-10">
       <div className="w-1/2 pr-16">
         <div className="scale-125">
-          <ParallexCard type="grid" src="/dashboard.png" />
+          <ParallexCard type="grid" src="/web.png" />
         </div>
       </div>
       <div className="w-1/2 px-16">

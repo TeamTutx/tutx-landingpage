@@ -1,5 +1,6 @@
 import { BadgeCheck } from 'lucide-react';
 import StepLoader from '../custom/loader';
+import ViewTabs from '../custom/view-tabs';
 
 export default function Hero() {
   return (
@@ -29,7 +30,9 @@ export default function Hero() {
           <StepLoader />
         </div>
       </div>
-      <div className="w-3/5 bg-primary/15"></div>
+      <div className="w-3/5 flex items-center justify-center">
+      <ViewTabs />
+      </div>
     </div>
   );
 }
