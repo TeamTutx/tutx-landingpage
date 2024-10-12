@@ -5,30 +5,31 @@ import { MoveRight, CircleXIcon } from "lucide-react";
 
 const loadingStates = [
   {
-    text: "Buying a condo",
+    text: "Lorem ipsum dolor",
   },
   {
-    text: "Travelling in a flight",
+    text: "Consectetur adipiscing elit",
   },
   {
-    text: "Meeting Tyler Durden",
+    text: "Vestibulum ante ipsum",
   },
   {
-    text: "He makes soap",
+    text: "Cras eu eros nisi",
   },
   {
-    text: "We goto a bar",
+    text: "Sed tempor elit",
   },
   {
-    text: "Start a fight",
+    text: "Morbi fringilla dolor",
   },
   {
-    text: "We like it",
+    text: "Curabitur posuere nisl",
   },
   {
-    text: "Welcome to F**** C***",
+    text: "Suspendisse potenti nunc",
   },
 ];
+
 
 export default function StepLoader() {
   const [loading, setLoading] = useState(false);

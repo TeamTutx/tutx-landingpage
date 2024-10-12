@@ -75,8 +75,8 @@ export default function Footer() {
           <div className="size-32">
             <div className="flex h-full flex-col items-center justify-center">
               <TutxBlack className="h-10" showText={true} fill="#fafafa"></TutxBlack>
-              <div className="pt-4 text-sm text-white text-opacity-70 dark:text-black">© 2024 Tutx.</div>
-              <div className="flex space-x-4 pt-4 text-white dark:text-black">
+              <div className="pt-4 text-sm text-background text-opacity-70">© 2024 Tutx.</div>
+              <div className="flex space-x-4 pt-4 text-background">
                 <Linkedin strokeWidth={1.2} size={20} />
                 <Mail strokeWidth={1.2} size={20} />
               </div>
