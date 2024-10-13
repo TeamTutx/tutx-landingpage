@@ -1,5 +1,5 @@
 import TutxBlack from '@/components/custom/tutx';
-import { Linkedin, Mail } from 'lucide-react';
+import { Linkedin, Mail, Heart } from 'lucide-react';
 import Link from 'next/link';
 
 export default function Footer() {
@@ -68,7 +68,7 @@ export default function Footer() {
   };
 
   return (
-    <div className="bg-zinc-900 p-16 dark:bg-background">
+    <div className="bg-zinc-900 p-16 pb-0 dark:bg-background">
       <div className="mx-auto max-w-7xl">
         <div className="flex justify-around">
           {renderFooterLinks()}
@@ -82,6 +82,11 @@ export default function Footer() {
               </div>
             </div>
           </div>
+        </div>
+        <div className="pb-4 pt-12 text-center text-sm text-white text-opacity-70">
+          <span>Brought you with</span>
+          <span> <Heart className='inline' size={15} strokeWidth={3}></Heart> </span>
+          <span>by friendly folks at @Tutx.</span>{' '}
         </div>
       </div>
     </div>

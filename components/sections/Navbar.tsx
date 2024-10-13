@@ -4,6 +4,7 @@ import * as React from 'react';
 import Link from 'next/link';
 import TutxBlack from '@/components/custom/tutx';
 import { ThemeToggle } from '@/components/custom/theme-toggle';
+import { Menu, X } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 
@@ -17,6 +18,8 @@ import {
   navigationMenuTriggerStyle
 } from '@/components/ui/navigation-menu';
 import RocketButton from '@/components/custom/rocket-button';
+import { useState, useEffect } from 'react';
+import Doodle from '../custom/doodle';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -52,13 +55,23 @@ const components: { title: string; href: string; description: string }[] = [
 ];
 
 export function Navbar() {
+  const [isClick, setisClick] = useState(false);
+  const [isVisible, setIsVisible] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsVisible(false);
+    }, 5000);
+    return () => clearTimeout(timer);
+  }, []);
+
   return (
-    <div className="sticky top-0 z-[100] border-b border-primary/5 py-4 backdrop-blur-[25px]">
-      <div className="mx-auto flex max-w-7xl justify-between">
+    <div className="sticky top-0 z-[100] border-b border-primary/5 px-4 py-4 backdrop-blur-[25px] sm:px-8">
+      <div className="mx-auto flex justify-between md:max-w-7xl">
         <div className="">
           <TutxBlack className="h-10" showText={true}></TutxBlack>
         </div>
-        <div>
+        <div className="hidden md:block">
           <NavigationMenu>
             <NavigationMenuList>
               <NavigationMenuItem>
@@ -111,7 +124,7 @@ export function Navbar() {
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Our Story</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
-              <NavigationMenuItem>
+              <NavigationMenuItem className="hidden lg:block">
                 <Link href="#about" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us</NavigationMenuLink>
                 </Link>
@@ -119,9 +132,31 @@ export function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="flex">
+        <div className="hidden md:flex">
           <RocketButton />
-          <ThemeToggle></ThemeToggle>
+          <ThemeToggle />
+        </div>
+        <div className="flex items-center space-x-4 md:hidden">
+          <ThemeToggle />
+          <button onClick={() => setisClick(!isClick)} className="transition-all hover:scale-125">
+            {!isClick ? <Menu /> : <X />}
+          </button>
+        </div>
+      </div>
+      {isClick && (
+        <div className="animate-slideInDown absolute z-10 flex w-full flex-col items-end space-y-2 overflow-hidden pr-8 pt-2 text-sm md:hidden">
+          <Link href="#institue">Use Cases</Link>
+          <Link href="#courses">Features</Link>
+          <Link href="#themes">Themes</Link>
+          <Link href="#story">Our Story</Link>
+          <Link href="#about">About Us</Link>
+          <Link href="#demo">Book a Demo</Link>
+        </div>
+      )}
+
+      <div className="animate-move-up">
+        <div className={`top-15 absolute right-10 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
+          <Doodle />
         </div>
       </div>
     </div>

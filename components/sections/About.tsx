@@ -97,7 +97,7 @@ export function About() {
                     target="_blank"
                     className="mt-4 rounded-full bg-primary p-3 text-sm font-bold text-white hover:bg-primary/80 dark:text-black md:mt-0"
                   >
-                    <Play fill="white dark:black" size={14}></Play>
+                    <Play size={14} strokeWidth={3}></Play>
                   </motion.a>
                 </div>
                 <div className="relative px-4 pt-4">
@@ -153,7 +153,7 @@ export function About() {
               layoutId={`button-${card.title}-${id}`}
               className="mt-4 rounded-full bg-primary p-3 text-sm font-bold text-white hover:bg-primary/80 dark:text-black md:mt-0"
             >
-              <Play fill="white dark:black" size={14}></Play>
+              <Play size={14} strokeWidth={3}></Play>
             </motion.button>
           </motion.div>
         ))}

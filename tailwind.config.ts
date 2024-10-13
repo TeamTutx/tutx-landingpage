@@ -55,7 +55,70 @@ const config: Config = {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
-      }
+      },
+      keyframes: {
+				slideInDown: {
+					'0%': { transform: 'translateY(-10%)', opacity: '0' },
+					'100%': { transform: 'translateY(0)', opacity: '1' },
+				  },
+				wave: {
+					"0%, 100%": { transform: "rotate(0deg)" },
+					"50%": { transform: "rotate(-10deg)" },
+				},
+				"move-up": {
+					from: {
+						transform: "translateY(10px)",
+						opacity: "0",
+					},
+					to: {
+						transform: "translateY(0px)",
+						opacity: "1",
+					},
+				},
+				"move-down": {
+					from: {
+						transform: "translateY(-10px)",
+						opacity: "0",
+					},
+					to: {
+						transform: "translateY(0px)",
+						opacity: "1",
+					},
+				},
+				"accordion-down": {
+					from: { height: "0" },
+					to: { height: "var(--radix-accordion-content-height)" },
+				},
+				"accordion-up": {
+					from: { height: "var(--radix-accordion-content-height)" },
+					to: { height: "0" },
+				},
+				meteor: {
+					"0%": {
+						transform: "rotate(215deg) translateX(0)",
+						opacity: "1",
+					},
+					"70%": { opacity: "1" },
+					"100%": {
+						transform: "rotate(215deg) translateX(-500px)",
+						opacity: "0",
+					},
+				},
+				border: {
+					'0%, 100%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+				  },
+			},
+      animation: {
+				"accordion-down": "accordion-down 0.2s ease-out",
+				"accordion-up": "accordion-up 0.2s ease-out",
+				"move-up": "move-up 1s linear forwards",
+				"move-down": "move-down 3s linear forwards",
+				"meteor-effect": "meteor 5s linear infinite",
+				wave: "wave 1s infinite",
+				slideInDown: 'slideInDown 0.5s ease-out',
+				border: 'border 10s ease infinite',
+			},
     }
   },
   // eslint-disable-next-line @typescript-eslint/no-require-imports
