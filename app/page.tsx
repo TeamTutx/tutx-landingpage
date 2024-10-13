@@ -1,38 +1,38 @@
 import Footer from '@/components/sections/Fotter';
 import Hero from '@/components/sections/Hero';
 import { Navbar } from '@/components/sections/Navbar';
-import TemplateA from '@/components/sections/TemplateA';
+import Improvements from '@/components/sections/Improvements';
 // import TemplateB from '@/components/sections/TemplateB';
-import TemplateC from '@/components/sections/TemplateC';
-import TemplateD from '@/components/sections/TemplateD';
-import TemplateE from '@/components/sections/TemplateE';
-import TemplateE1 from '@/components/sections/TemplateE1';
-import TemplateE2 from '@/components/sections/TemplateE2';
-import TemplateF from '@/components/sections/TemplateF';
-import TemplateG from '@/components/sections/TemplateG';
-import { TemplateH } from '@/components/sections/TemplateH';
-import TemplateI from '@/components/sections/TemplateI';
-import TemplateJ from '@/components/sections/TemplateJ';
-import Templatek from '@/components/sections/TemplateK';
+import Information from '@/components/sections/Information';
+import Institute from '@/components/sections/Institute';
+import Courses from '@/components/sections/Courses';
+import Payments from '@/components/sections/Payments';
+import Dashboard from '@/components/sections/Dashboard';
+import Themes from '@/components/sections/Themes';
+import Story from '@/components/sections/Story';
+import { About } from '@/components/sections/About';
+import Articles from '@/components/sections/Articles';
+import Tagline from '@/components/sections/Tagline';
+import Contact from '@/components/sections/Contact';
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <Navbar />
       <Hero />
-      <TemplateA />
+      <Improvements />
       {/* <TemplateB /> */}
-      <TemplateC />
-      <TemplateD />
-      <TemplateE />
-      <TemplateE1 />
-      <TemplateE2 />
-      <TemplateF />
-      <TemplateG />
-      <TemplateH />
-      <TemplateI />
-      <TemplateJ />
-      <Templatek />
+      <Information />
+      <Institute />
+      <Courses />
+      <Payments />
+      <Dashboard />
+      <Themes />
+      <Story />
+      <About />
+      <Articles />
+      <Tagline />
+      <Contact />
       <Footer />
     </div>
   );

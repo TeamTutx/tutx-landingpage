@@ -1,23 +1,27 @@
-import { BellRing, ChartColumn, MoveRight } from 'lucide-react';
-import DashboardTabs from '../custom/dashboard-tabs';
+import { MoveRight, CreditCard, BadgeDollarSign, Receipt } from 'lucide-react';
+import PaymentTabs from '../custom/payment-tabs';
 
-export default function TemplateE() {
-  const heading = 'Financial Reporting for Informed Decisions';
-  const subheading = "Gain insights into your institute's financial health with detailed reports and analyses that keep you on track.";
+export default function Payments() {
+  const heading = 'Track Payments and Generate Invoices';
+  const subheading =
+    'Track payments and fees in real time, automate invoicing to reduce manual work, and offer students a variety of convenient payment options.';
 
   // Points and their corresponding icon components
   const points = [
-    { icon: BellRing, text: 'Send timely fee collection reminders to students and parents.' },
-    { icon: ChartColumn, text: 'Monitor financial status and cash flow with real-time tracking.' }
+    { icon: BadgeDollarSign, text: 'Easily track student payments and manage them in real-time.' },
+    { icon: Receipt, text: 'Automatically generate detailed invoices for each transaction made.' },
+    { icon: CreditCard, text: 'Set up your own payment portal to streamline collections.' }
   ];
 
   return (
-    <div className="mx-auto mt-32 flex min-h-[525px] max-w-7xl px-10">
-      <div className="w-1/2 pr-16">
+    <div id="payments" className="mx-auto mt-32 flex min-h-[525px] max-w-7xl px-10">
+      <div className="w-1/2">
+        <PaymentTabs />
+      </div>
+      <div className="w-1/2 px-16">
         <div className="text-4xl font-extrabold leading-tight">{heading}</div>
         <div className="mt-8 text-sm text-muted-foreground">{subheading}</div>
 
-        {/* Map over points to generate the content */}
         <div className="my-8 space-y-4 text-sm">
           {points.map((point, index) => {
             const IconComponent = point.icon;
@@ -31,15 +35,12 @@ export default function TemplateE() {
         </div>
 
         <div className="group flex cursor-pointer items-center text-primary">
-          See in Action
+          Jump In
           <MoveRight
             className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
             strokeWidth={1}
           />
         </div>
-      </div>
-      <div className="w-1/2">
-        <DashboardTabs></DashboardTabs>
       </div>
     </div>
   );

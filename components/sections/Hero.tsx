@@ -5,7 +5,7 @@ import ViewTabs from '@/components/custom/view-tabs';
 export default function Hero() {
   const heading = 'Manage Institute with Ease';
   const subheading =
-    'Take control of your tuition records, automate fee tracking, and simplify administration so you can focus on teaching.';
+    'Take control of your institute records, automate fee tracking, and simplify administration so you can focus on teaching.';
   const features: string[] = [
     'Create and manage classes and subjects with ease.',
     'Track student payments and outstanding fees',

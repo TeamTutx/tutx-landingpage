@@ -4,7 +4,7 @@ import { PinContainer } from '@/components/ui/3d-pin';
 import Image from 'next/image';
 import { MoveRight } from 'lucide-react';
 
-export default function TemplateI() {
+export default function Articles() {
   const articles = [
     {
       title: 'Debounce',

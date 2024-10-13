@@ -1,7 +1,7 @@
 import { BookCopy, User, Users, MoveRight } from 'lucide-react';
 import SubjectTabs from '../custom/subject-tabs';
 
-export default function TemplateE() {
+export default function Courses() {
   const heading = 'Intuitive and Simple Class Management';
   const subheading =
     'Easily manage your entire curriculum from one centralized dashboard. Make quick updates, add new entries, and stay on top of your student and teacher assignments.';
@@ -13,7 +13,7 @@ export default function TemplateE() {
   ];
 
   return (
-    <div className="mx-auto mt-32 flex min-h-[525px] max-w-7xl px-10">
+    <div id="courses" className="mx-auto mt-32 flex min-h-[525px] max-w-7xl px-10">
       <div className="w-1/2 pr-16">
         <div className="text-4xl font-extrabold leading-tight">{heading}</div>
         <div className="mt-8 text-sm text-muted-foreground">{subheading}</div>

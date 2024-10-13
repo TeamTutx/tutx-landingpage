@@ -5,7 +5,7 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { useOutsideClick } from '@/hooks/use-outside-click';
 import { Play } from 'lucide-react';
 
-export function TemplateH() {
+export function About() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(null);
   const ref = useRef<HTMLDivElement>(null);
   const id = useId();
@@ -30,7 +30,7 @@ export function TemplateH() {
   useOutsideClick(ref, () => setActive(null));
 
   return (
-    <>
+    <div id="about">
       <AnimatePresence>
         {active && typeof active === 'object' && (
           <motion.div
@@ -158,7 +158,7 @@ export function TemplateH() {
           </motion.div>
         ))}
       </ul>
-    </>
+    </div>
   );
 }
 

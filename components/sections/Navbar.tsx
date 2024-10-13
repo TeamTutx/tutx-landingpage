@@ -21,32 +21,32 @@ import RocketButton from '@/components/custom/rocket-button';
 const components: { title: string; href: string; description: string }[] = [
   {
     title: 'Manage Institute with Ease',
-    href: '//features/manage-institute',
-    description: 'Take control of your tuition records, automate fee tracking, and simplify administration for effective teaching.'
+    href: '#institute',
+    description: 'Take control of your institution records, automate fee tracking, and simplify administration for effective teaching.'
   },
   {
     title: 'Course Management',
-    href: '//features/course-management',
+    href: '#courses',
     description: 'Easily create, manage, and update courses with a few clicks.'
   },
   {
     title: 'Student Enrollment',
-    href: '//features/student-enrollment',
+    href: '#courses',
     description: 'Streamline student enrollment with automated processes and notifications.'
   },
   {
     title: 'Payment Tracking',
-    href: '//features/payment-tracking',
+    href: '#payments',
     description: 'Track student payments in real-time for better financial management.'
   },
   {
     title: 'Automated Fee Reminders',
-    href: '//features/fee-reminders',
+    href: '#dashboard',
     description: 'Send timely fee collection reminders to students and parents to ensure prompt payments.'
   },
   {
     title: 'Personalized Platform Experience',
-    href: '//features/personalization',
+    href: '#dashboard',
     description: "Customize your platform with unique themes and colors that reflect your institute's branding."
   }
 ];
@@ -80,10 +80,10 @@ export function Navbar() {
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/" title="For Institutes">
+                    <ListItem href="#institute" title="For Institutes">
                       Efficient class management and real-time financial tracking.
                     </ListItem>
-                    <ListItem href="/" title="For Students">
+                    <ListItem href="#courses" title="For Students">
                       Easy enrollment process and accessible payment portal.
                     </ListItem>
                   </ul>
@@ -102,17 +102,17 @@ export function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
+                <Link href="#themes" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Themes</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
+                <Link href="#story" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Our Story</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem>
-                <Link href="/" legacyBehavior passHref>
+                <Link href="#about" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>

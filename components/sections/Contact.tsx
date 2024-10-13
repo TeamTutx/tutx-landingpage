@@ -4,7 +4,7 @@ import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
-export default function Templatek() {
+export default function Contact() {
   const subheading = 'Reach out to our team to see how your agency can benefit from Tutx.';
   return (
     <div className="mx-auto flex max-w-7xl px-16 py-36" id="demo">

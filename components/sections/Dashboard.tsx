@@ -1,24 +1,19 @@
-import { MoveRight, Building, BookMarked, TrendingUp, GraduationCap } from 'lucide-react';
-import StepTabs from '../custom/step-tabs';
+import { BellRing, ChartColumn, MoveRight } from 'lucide-react';
+import DashboardTabs from '../custom/dashboard-tabs';
 
-export default function TemplateD() {
-  const heading = 'Build and Customize Your Institute Profile';
-  const subheading = "Easily create and customize your institute's profile. Manage courses, subjects, and batches all in one place.";
+export default function Dashboard() {
+  const heading = 'Financial Reporting for Informed Decisions';
+  const subheading = "Gain insights into your institute's financial health with detailed reports and analyses that keep you on track.";
 
   // Points and their corresponding icon components
   const points = [
-    { icon: Building, text: 'Add institute details, name, address, contact information.' },
-    { icon: BookMarked, text: 'Define subjects and courses with descriptions.' },
-    { icon: GraduationCap, text: 'Organize and manage batches for your courses.' },
-    { icon: TrendingUp, text: 'Update information as your institute grows.' }
+    { icon: BellRing, text: 'Send timely fee collection reminders to students and parents.' },
+    { icon: ChartColumn, text: 'Monitor financial status and cash flow with real-time tracking.' }
   ];
 
   return (
-    <div className="mx-auto mt-32 flex min-h-[525px] max-w-7xl px-10">
-      <div className="w-1/2">
-        <StepTabs />
-      </div>
-      <div className="w-1/2 px-16">
+    <div id="dashboard" className="mx-auto mt-32 flex min-h-[525px] max-w-7xl px-10">
+      <div className="w-1/2 pr-16">
         <div className="text-4xl font-extrabold leading-tight">{heading}</div>
         <div className="mt-8 text-sm text-muted-foreground">{subheading}</div>
 
@@ -36,12 +31,15 @@ export default function TemplateD() {
         </div>
 
         <div className="group flex cursor-pointer items-center text-primary">
-          Get Started
+          See in Action
           <MoveRight
             className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
             strokeWidth={1}
           />
         </div>
+      </div>
+      <div className="w-1/2">
+        <DashboardTabs></DashboardTabs>
       </div>
     </div>
   );

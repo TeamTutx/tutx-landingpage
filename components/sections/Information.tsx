@@ -3,9 +3,9 @@ import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 
 const words = `The Ultimate Institute Management Solution`;
 
-export default function TemplateC() {
+export default function Information() {
   const paragraphs = [
-    `Our comprehensive platform simplifies the complexities of managing tuition centers, allowing you to create classes, assign teachers, and manage student enrollment effortlessly. `,
+    `Our comprehensive platform simplifies the complexities of managing institution centers, allowing you to create classes, assign teachers, and manage student enrollment effortlessly. `,
     `With real-time payment tracking and automated fee management, you can easily oversee outstanding fees and generate insightful reports, all from a user-friendly interface.`,
     `By reducing manual errors and streamlining operations, our innovative software saves you valuable time and helps you focus on delivering quality education.`
   ];

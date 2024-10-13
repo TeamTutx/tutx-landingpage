@@ -1,7 +1,7 @@
 import { BadgePercent, TrendingUp, AlarmClock, BadgeDollarSign, CircleAlert, DatabaseZap } from 'lucide-react';
 
-export default function TemplateA() {
-  const heading = "Digitalize your tuition center's operations and eliminate the hassle of manual record-keeping.";
+export default function Improvements() {
+  const heading = "Digitalize your institute center's operations and eliminate the hassle of manual record-keeping.";
 
   const stats = [
     { icon: BadgePercent, name: 'Efficiency', percentage: '55%', label: 'Increase Efficiency' },

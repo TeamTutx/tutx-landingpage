@@ -6,7 +6,7 @@ import { useThemeContext } from '@/context/theme-data-provider';
 import { useTheme } from 'next-themes';
 import { useEffect, useState } from 'react';
 
-export default function TemplateF() {
+export default function Themes() {
   const words = 'Personalize Your platform experience';
   const { themeColor } = useThemeContext();
   const { theme } = useTheme();
@@ -22,7 +22,7 @@ export default function TemplateF() {
   }, [themeColor, theme]);
 
   return (
-    <div className="mt-32 flex flex-col items-center bg-primary/5 py-20">
+    <div id="themes" className="mt-32 flex flex-col items-center bg-primary/5 py-20">
       <div className="w-full text-center text-5xl font-extrabold leading-tight">
         <TextGenerateEffect words={words} className="text-5xl font-extrabold leading-tight" highlights={['experience']} />
       </div>
