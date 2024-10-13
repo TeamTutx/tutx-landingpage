@@ -6,6 +6,8 @@ import TemplateA from '@/components/sections/TemplateA';
 import TemplateC from '@/components/sections/TemplateC';
 import TemplateD from '@/components/sections/TemplateD';
 import TemplateE from '@/components/sections/TemplateE';
+import TemplateE1 from '@/components/sections/TemplateE1';
+import TemplateE2 from '@/components/sections/TemplateE2';
 import TemplateF from '@/components/sections/TemplateF';
 import TemplateG from '@/components/sections/TemplateG';
 import { TemplateH } from '@/components/sections/TemplateH';
@@ -23,6 +25,8 @@ export default function Home() {
       <TemplateC />
       <TemplateD />
       <TemplateE />
+      <TemplateE1 />
+      <TemplateE2 />
       <TemplateF />
       <TemplateG />
       <TemplateH />

@@ -2,7 +2,7 @@
 
 import * as React from 'react';
 import Link from 'next/link';
-import TutxBlack from '@/public/tutx';
+import TutxBlack from '@/components/custom/tutx';
 import { ThemeToggle } from '@/components/custom/theme-toggle';
 
 import { cn } from '@/lib/utils';
@@ -20,35 +20,34 @@ import RocketButton from '@/components/custom/rocket-button';
 
 const components: { title: string; href: string; description: string }[] = [
   {
-    title: 'Alert Dialog',
-    href: '//primitives/alert-dialog',
-    description: 'Lorem ipsum odor amet, consectetuer adipiscing elit.'
+    title: 'Manage Institute with Ease',
+    href: '//features/manage-institute',
+    description: 'Take control of your tuition records, automate fee tracking, and simplify administration for effective teaching.'
   },
   {
-    title: 'Hover Card',
-    href: '//primitives/hover-card',
-    description: 'Lorem ipsum Porttitor accumsan diam enim sociosqu facilisis sodales inceptos ullamcorper.'
+    title: 'Course Management',
+    href: '//features/course-management',
+    description: 'Easily create, manage, and update courses with a few clicks.'
   },
   {
-    title: 'Progress',
-    href: '//primitives/progress',
-    description: 'Lorem ipsum odor amet, consectetuer adipiscing elit.'
+    title: 'Student Enrollment',
+    href: '//features/student-enrollment',
+    description: 'Streamline student enrollment with automated processes and notifications.'
   },
   {
-    title: 'Scroll-area',
-    href: '//primitives/scroll-area',
-    description: 'Lorem ipsum sem porta proin natoque morbi volutpat at elit sit.'
+    title: 'Payment Tracking',
+    href: '//features/payment-tracking',
+    description: 'Track student payments in real-time for better financial management.'
   },
   {
-    title: 'Tabs',
-    href: '//primitives/tabs',
-    description: 'A set of layered sections of content—known as tab panels—that are displayed one at a time.'
+    title: 'Automated Fee Reminders',
+    href: '//features/fee-reminders',
+    description: 'Send timely fee collection reminders to students and parents to ensure prompt payments.'
   },
   {
-    title: 'Tooltip',
-    href: '//primitives/tooltip',
-    description:
-      'A popup that displays information related to an element when the element receives keyboard focus or the mouse hovers over it.'
+    title: 'Personalized Platform Experience',
+    href: '//features/personalization',
+    description: "Customize your platform with unique themes and colors that reflect your institute's branding."
   }
 ];
 
@@ -72,22 +71,20 @@ export function Navbar() {
                           className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-muted/50 to-muted p-6 no-underline outline-none focus:shadow-md"
                           href="/"
                         >
-                          <div className="mb-2 mt-4 text-lg font-medium">tutx</div>
+                          <div className="mb-4 text-lg font-medium">
+                            <TutxBlack className="h-8" showText={true}></TutxBlack>
+                          </div>
                           <p className="text-sm leading-tight text-muted-foreground">
-                            Lorem ipsum odor amet, consectetuer adipiscing elit. Quam nisl accumsan hendrerit orci netus ac ipsum libero.
-                            Pellentesque nunc quisque
+                            Tutx simplifies institute management with efficient tools for course, payment, and student tracking.
                           </p>
                         </a>
                       </NavigationMenuLink>
                     </li>
-                    <ListItem href="/" title="Introduction">
-                      Lorem ipsum odor amet, consectetuer adipiscing elit.
+                    <ListItem href="/" title="For Institutes">
+                      Efficient class management and real-time financial tracking.
                     </ListItem>
-                    <ListItem href="/" title="Installation">
-                      Lorem ipsum raesent libero. Sed cursus ante dapibus diam.
-                    </ListItem>
-                    <ListItem href="/" title="Support">
-                      Lorem ipsum consectetuer adipiscing elit.
+                    <ListItem href="/" title="For Students">
+                      Easy enrollment process and accessible payment portal.
                     </ListItem>
                   </ul>
                 </NavigationMenuContent>

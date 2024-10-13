@@ -20,10 +20,10 @@ export default function ViewTabs() {
         <TabsContent value="web">
           <div className="mt-4 w-full">
             <Image
-              src="/web.png"
+              src="/zinc-light.png"
               height="1000"
               width="1000"
-              className="h-full w-full rounded-lg border border-muted-foreground/20 object-cover group-hover/card:shadow-xl dark:border-zinc-900"
+              className="h-full w-full rounded-md border border-muted-foreground/10 object-cover group-hover/card:shadow-xl dark:border-zinc-900"
               alt="thumbnail"
             />
           </div>
@@ -34,7 +34,7 @@ export default function ViewTabs() {
             src="/mobile-light.png"
             height="1000"
             width="1000"
-            className="max-h-full w-auto rounded-3xl object-cover group-hover/card:shadow-xl dark:border dark:border-zinc-700"
+            className="max-h-full w-auto rounded-3xl object-cover group-hover/card:shadow-xl"
             alt="thumbnail"
           />
           <Image

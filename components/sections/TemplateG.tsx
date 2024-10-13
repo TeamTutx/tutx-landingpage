@@ -24,6 +24,8 @@ export default function TemplateG() {
     }
   ];
 
+  const story =
+    "We're three friends united by a bold idea: to revolutionize how tuition centers manage their operations. Along the way, we realized many small to mid-sized centers were still stuck in the past, using pen and paper or basic Excel sheets to handle student records and payments. That sparked our mission to create a smarter, digital solution. Our goal? To give educators back their time, so they can focus on teaching, not paperwork. We're building a platform that cuts through the admin chaos, and we're just getting started—our vision is unfolding, and we can't wait to see where it takes us!";
   return (
     <div className="flex flex-col items-center space-y-10 py-16">
       <div className="flex">
@@ -33,12 +35,7 @@ export default function TemplateG() {
       </div>
       <div className="flex items-center justify-center text-muted-foreground">
         <div className="w-2/3 space-y-6 text-center">
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-            enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-            in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-            sunt in culpa qui officia deserunt mollit anim id est laborum.
-          </div>
+          <div>{story}</div>
         </div>
       </div>
     </div>

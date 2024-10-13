@@ -7,7 +7,7 @@ import { useTheme } from 'next-themes';
 interface TutxBlackProps {
   className?: string;
   showText?: boolean;
-  fill?: string;
+  white?: boolean;
 }
 
 type ColorMap = {
@@ -16,7 +16,7 @@ type ColorMap = {
   };
 };
 
-const TutxBlack: React.FC<TutxBlackProps> = ({ className, showText, fill }) => {
+const TutxBlack: React.FC<TutxBlackProps> = ({ className, showText, white }) => {
   const { themeColor } = useThemeContext();
   const { theme } = useTheme();
 
@@ -39,16 +39,13 @@ const TutxBlack: React.FC<TutxBlackProps> = ({ className, showText, fill }) => {
     }
   };
 
-  let logoColor = fill || colorMap[selectedTheme][themeColor];
-  let pathColor = 'white';
+  let logoColor = colorMap[selectedTheme][themeColor];
+  let pathColor = selectedTheme == 'dark' ? 'black' : 'white';
 
-  if (fill) {
-    pathColor =  colorMap[selectedTheme][themeColor];
-    logoColor = selectedTheme=="dark"? "black":"white";
-  } else {
-    pathColor =  selectedTheme=="dark"? "black":"white"
+  if (white) {
+    logoColor = 'white';
+    pathColor = 'black';
   }
-
 
   return (
     <svg viewBox="0 0 359 157.81250000000003" xmlns="http://www.w3.org/2000/svg" className={className}>

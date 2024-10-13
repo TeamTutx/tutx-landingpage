@@ -1,24 +1,27 @@
-import { BookCopy, User, Users, MoveRight } from 'lucide-react';
-import SubjectTabs from '../custom/subject-tabs';
+import { MoveRight, CreditCard, BadgeDollarSign, Receipt } from 'lucide-react';
+import PaymentTabs from '../custom/payment-tabs';
 
-export default function TemplateE() {
-  const heading = 'Intuitive and Simple Class Management';
+export default function TemplateD() {
+  const heading = 'Track Payments and Generate Invoices';
   const subheading =
-    'Easily manage your entire curriculum from one centralized dashboard. Make quick updates, add new entries, and stay on top of your student and teacher assignments.';
+    'Track payments and fees in real time, automate invoicing to reduce manual work, and offer students a variety of convenient payment options.';
 
+  // Points and their corresponding icon components
   const points = [
-    { icon: BookCopy, text: 'Easily edit courses and subjects in real-time, without delays.' },
-    { icon: User, text: 'Quickly enroll and manage student records for each class.' },
-    { icon: Users, text: 'Assign teachers and update their details with ease.' }
+    { icon: BadgeDollarSign, text: 'Easily track student payments and manage them in real-time.' },
+    { icon: Receipt, text: 'Automatically generate detailed invoices for each transaction made.' },
+    { icon: CreditCard, text: 'Set up your own payment portal to streamline collections.' }
   ];
 
   return (
     <div className="mx-auto mt-32 flex min-h-[525px] max-w-7xl px-10">
-      <div className="w-1/2 pr-16">
+      <div className="w-1/2">
+        <PaymentTabs />
+      </div>
+      <div className="w-1/2 px-16">
         <div className="text-4xl font-extrabold leading-tight">{heading}</div>
         <div className="mt-8 text-sm text-muted-foreground">{subheading}</div>
 
-        {/* Map over points to generate the content */}
         <div className="my-8 space-y-4 text-sm">
           {points.map((point, index) => {
             const IconComponent = point.icon;
@@ -32,15 +35,12 @@ export default function TemplateE() {
         </div>
 
         <div className="group flex cursor-pointer items-center text-primary">
-          See how it works
+          Jump In
           <MoveRight
             className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
             strokeWidth={1}
           />
         </div>
-      </div>
-      <div className="w-1/2">
-        <SubjectTabs></SubjectTabs>
       </div>
     </div>
   );

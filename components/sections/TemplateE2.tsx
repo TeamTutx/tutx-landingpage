@@ -1,15 +1,14 @@
-import { BookCopy, User, Users, MoveRight } from 'lucide-react';
-import SubjectTabs from '../custom/subject-tabs';
+import { BellRing, ChartColumn, MoveRight } from 'lucide-react';
+import DashboardTabs from '../custom/dashboard-tabs';
 
 export default function TemplateE() {
-  const heading = 'Intuitive and Simple Class Management';
-  const subheading =
-    'Easily manage your entire curriculum from one centralized dashboard. Make quick updates, add new entries, and stay on top of your student and teacher assignments.';
+  const heading = 'Financial Reporting for Informed Decisions';
+  const subheading = "Gain insights into your institute's financial health with detailed reports and analyses that keep you on track.";
 
+  // Points and their corresponding icon components
   const points = [
-    { icon: BookCopy, text: 'Easily edit courses and subjects in real-time, without delays.' },
-    { icon: User, text: 'Quickly enroll and manage student records for each class.' },
-    { icon: Users, text: 'Assign teachers and update their details with ease.' }
+    { icon: BellRing, text: 'Send timely fee collection reminders to students and parents.' },
+    { icon: ChartColumn, text: 'Monitor financial status and cash flow with real-time tracking.' }
   ];
 
   return (
@@ -32,7 +31,7 @@ export default function TemplateE() {
         </div>
 
         <div className="group flex cursor-pointer items-center text-primary">
-          See how it works
+          See in Action
           <MoveRight
             className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
             strokeWidth={1}
@@ -40,7 +39,7 @@ export default function TemplateE() {
         </div>
       </div>
       <div className="w-1/2">
-        <SubjectTabs></SubjectTabs>
+        <DashboardTabs></DashboardTabs>
       </div>
     </div>
   );

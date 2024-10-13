@@ -5,9 +5,10 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 
 export default function Templatek() {
+  const subheading = 'Reach out to our team to see how your agency can benefit from Tutx.';
   return (
     <div className="mx-auto flex max-w-7xl px-16 py-36" id="demo">
-      <div className=" space-y-10 pr-20">
+      <div className="space-y-10 pr-20">
         <div className="font-bold text-primary">BOOK A DEMO</div>
 
         <div className="leading-tighter text-6xl font-extrabold">
@@ -15,7 +16,7 @@ export default function Templatek() {
           We&apos;ve Got <br />
           <span className="text-primary">Answers</span>
         </div>
-        <div className="text-sm text-muted-foreground">Reach out to our team to see how your agency can benefit from Productive.</div>
+        <div className="text-sm text-muted-foreground">{subheading}</div>
         <div className="text-bold flex items-center text-primary">
           <MessageCircle className="mr-3 inline" size={20} strokeWidth={1.5} />
           hello@teamtutx.com

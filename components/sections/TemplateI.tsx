@@ -5,6 +5,21 @@ import Image from 'next/image';
 import { MoveRight } from 'lucide-react';
 
 export default function TemplateI() {
+  const articles = [
+    {
+      title: 'Debounce',
+      description: 'Optimizing search with debouncing: fewer API calls, faster results!',
+      imageUrl: '/article2.png',
+      link: 'https://www.linkedin.com/pulse/days-2425180-building-tutx-debounce-supril-singh-tnvrf/'
+    },
+    {
+      title: 'TanStack',
+      description: "After all, it's all about intelligent state management.",
+      imageUrl: '/article1.jpeg',
+      link: 'https://www.linkedin.com/pulse/day-7-8180-building-tutx-supril-singh-uvzxf/'
+    }
+  ];
+
   return (
     <div className="mx-auto flex max-w-7xl items-center justify-center p-16 py-32">
       <div className="flex-1 space-y-4">
@@ -18,46 +33,19 @@ export default function TemplateI() {
         </div>
       </div>
 
-      <PinContainer
-        title="/linkedin.com"
-        href="https://www.linkedin.com/pulse/days-2425180-building-tutx-debounce-supril-singh-tnvrf/"
-      >
-        <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight text-black dark:text-white/50 sm:basis-1/2">
-          <h3 className="!m-0 max-w-xs !pb-2 text-base font-bold text-black dark:text-white">Debounce</h3>
-          <div className="!m-0 !p-0 text-base font-normal">
-            <span className="text-muted-foreground">Lacus pharetra lacinia velit eleifend lacinia litora.</span>
+      {articles.map((article) => (
+        <PinContainer key={article.title} title="/linkedin.com" href={article.link}>
+          <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight text-black dark:text-white/50 sm:basis-1/2">
+            <h3 className="!m-0 max-w-xs !pb-2 text-base font-bold text-black dark:text-white">{article.title}</h3>
+            <div className="!m-0 !p-0 text-base font-normal">
+              <span className="text-muted-foreground">{article.description}</span>
+            </div>
+            <div className="mt-4 flex h-48 w-full flex-1 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary via-primary to-primary sm:rounded-tl-lg sm:rounded-tr-lg">
+              <Image width={200} height={200} alt="" src={article.imageUrl} className="h-full w-full object-cover object-center" />
+            </div>
           </div>
-          <div className="mt-4 flex h-48 w-full flex-1 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary via-primary to-primary sm:rounded-tl-lg sm:rounded-tr-lg">
-            <Image
-              width={200}
-              height={200}
-              alt=""
-              objectFit="cover"
-              src="/article2.png"
-              className="h-full w-full object-cover object-center"
-            />
-          </div>
-        </div>
-      </PinContainer>
-
-      <PinContainer title="/linkedin.com" href="https://www.linkedin.com/pulse/day-7-8180-building-tutx-supril-singh-uvzxf/">
-        <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight sm:basis-1/2">
-          <h3 className="!m-0 max-w-xs !pb-2 text-base font-bold text-black dark:text-white">TanStack</h3>
-          <div className="!m-0 !p-0 text-base font-normal">
-            <span className="text-muted-foreground">Neque enim maximus lacinia nibh, penatibus erat erat faucibus massa.</span>
-          </div>
-          <div className="mt-4 flex h-48 w-full flex-1 items-center justify-center overflow-hidden rounded-lg bg-gradient-to-br from-primary via-primary to-primary sm:rounded-tl-lg sm:rounded-tr-lg">
-            <Image
-              width={200}
-              height={200}
-              alt=""
-              objectFit="cover"
-              src="/article1.jpeg"
-              className="h-full w-full object-cover object-center"
-            />
-          </div>
-        </div>
-      </PinContainer>
+        </PinContainer>
+      ))}
     </div>
   );
 }

@@ -28,7 +28,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning className="scroll-smooth">
       <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <NextThemesProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <NextThemesProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <ThemeDataProvider>{children}</ThemeDataProvider>
         </NextThemesProvider>
       </body>

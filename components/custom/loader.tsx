@@ -1,63 +1,45 @@
-"use client";
-import React, { useState } from "react";
-import { MultiStepLoader as Loader } from "../ui/multi-step-loader";
-import { MoveRight, CircleXIcon } from "lucide-react";
+'use client';
+import React, { useState } from 'react';
+import { MultiStepLoader as Loader } from '../ui/multi-step-loader';
+import { MoveRight, CircleXIcon } from 'lucide-react';
 
 const loadingStates = [
   {
-    text: "Lorem ipsum dolor",
+    text: "Pop in your name and email. We can't wait to meet you!"
   },
   {
-    text: "Consectetur adipiscing elit",
+    text: "Tell us how you want your demo experience to be. We're all ears!"
   },
   {
-    text: "Vestibulum ante ipsum",
+    text: "Your details land directly with Sheel, who's excited to dive in."
   },
   {
-    text: "Cras eu eros nisi",
+    text: 'Our Tutx team is rolling up their sleeves to fine-tune everything.'
   },
   {
-    text: "Sed tempor elit",
-  },
-  {
-    text: "Morbi fringilla dolor",
-  },
-  {
-    text: "Curabitur posuere nisl",
-  },
-  {
-    text: "Suspendisse potenti nunc",
-  },
+    text: "Once it's perfect, we'll drop you a message with all the demo details!"
+  }
 ];
-
 
 export default function StepLoader() {
   const [loading, setLoading] = useState(false);
   return (
     <div className="flex items-center justify-center">
-      {/* Core Loader Modal */}
       <Loader loadingStates={loadingStates} loading={loading} duration={2000} />
 
-      {/* The buttons are for demo only, remove it in your actual code ⬇️ */}
-      <button
-        onClick={() => setLoading(true)}
-        className="group flex cursor-pointer items-center text-primary"
-      >
+      <button onClick={() => setLoading(true)} className="group flex cursor-pointer items-center text-primary">
         <a href="#demo">
-        Get a demo
-            <MoveRight
-              className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
-              strokeWidth={1}
-            />
+          Get a demo
+          <MoveRight
+            className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
+            strokeWidth={1}
+          />
         </a>
       </button>
 
       {loading && (
-        <button
-          className="fixed top-4 right-4 text-black dark:text-white z-[120]"
-          onClick={() => setLoading(false)}
-        >
-        <CircleXIcon/>
+        <button className="fixed right-4 top-4 z-[120] text-black dark:text-white" onClick={() => setLoading(false)}>
+          <CircleXIcon />
         </button>
       )}
     </div>
