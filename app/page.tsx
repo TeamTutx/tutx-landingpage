@@ -17,23 +17,25 @@ import Contact from '@/components/sections/Contact';
 
 export default function Home() {
   return (
-    <div className="min-h-screen max-w-screen overflow-x-hidden">
+    <div className="min-h-screen max-w-screen">
       <Navbar />
-      <Hero />
-      <Improvements />
-      {/* <TemplateB /> */}
-      <Information />
-      <Institute />
-      <Courses />
-      <Payments />
-      <Dashboard />
-      <Themes />
-      <Story />
-      <About />
-      <Articles />
-      <Tagline />
-      <Contact />
-      <Footer />
+      <div className="overflow-x-hidden">
+        <Hero />
+        <Improvements />
+        {/* <TemplateB /> */}
+        <Information />
+        <Institute />
+        <Courses />
+        <Payments />
+        <Dashboard />
+        <Themes />
+        <Story />
+        <About />
+        <Articles />
+        <Tagline />
+        <Contact />
+        <Footer />
+      </div>
     </div>
   );
 }
