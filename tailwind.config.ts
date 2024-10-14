@@ -57,6 +57,10 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)'
       },
       keyframes: {
+        appear: {
+					'0%': { opacity: '0' },
+					'100%': { opacity: '1' },
+				  },
 				slideInDown: {
 					'0%': { transform: 'translateY(-10%)', opacity: '0' },
 					'100%': { transform: 'translateY(0)', opacity: '1' },
@@ -110,6 +114,7 @@ const config: Config = {
 				  },
 			},
       animation: {
+        "appear": "appear 0.3s ease-in",
 				"accordion-down": "accordion-down 0.2s ease-out",
 				"accordion-up": "accordion-up 0.2s ease-out",
 				"move-up": "move-up 1s linear forwards",

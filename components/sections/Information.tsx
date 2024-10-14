@@ -1,7 +1,7 @@
 'use client';
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
 
-const words = `The Ultimate Institute Management Solution`;
+const words = `All in One Institute Management`;
 
 export default function Information() {
   const paragraphs = [
@@ -11,16 +11,16 @@ export default function Information() {
   ];
 
   return (
-    <div className="flex min-h-[400px] bg-primary/5">
-      <div className="flex w-2/5">
+    <div className="flex flex-col md:flex-row py-16 bg-primary/5">
+      <div className="flex w-full md:w-2/5 pb-12 md:pb-0">
         <div className="flex items-center justify-center text-5xl font-extrabold leading-tight">
-          <div className="w-3/4 text-center">
-            <TextGenerateEffect words={words} className="text-5xl font-extrabold leading-tight" highlights={['Ultimate', 'Solution']} />
+          <div className="text-center pl-4">
+            <TextGenerateEffect words={words} className="text-5xl font-extrabold leading-tight" highlights={['All','Institute']} />
           </div>
         </div>
       </div>
-      <div className="flex w-3/5 items-center justify-center text-muted-foreground">
-        <div className="w-3/4 space-y-6">
+      <div className="flex w-full md:w-3/5 items-center justify-center text-muted-foreground">
+        <div className="w-3/4 space-y-6 text-center md:text-left text-sm md:text-base">
           {paragraphs.map((paragraph, index) => (
             <div key={index}>{paragraph}</div>
           ))}

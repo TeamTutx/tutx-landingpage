@@ -22,7 +22,7 @@ export default function ViewTabs() {
               src="/zinc-light.png"
               height="625"
               width="625"
-              className="rounded-md border border-muted-foreground/20 object-cover mt-12 shadow-xl dark:border-zinc-900"
+              className="rounded-md animate-appear border border-muted-foreground/20 object-cover mt-12 shadow-xl dark:border-zinc-900"
               alt="thumbnail"
             />
         </TabsContent>
@@ -32,14 +32,14 @@ export default function ViewTabs() {
             src="/mobile-light.png"
               height="575"
               width="200"
-            className="rounded-3xl object-cover shadow-xl"
+            className="rounded-3xl object-cover shadow-xl animate-appear"
             alt="thumbnail"
           />
           <Image
             src="/mobile-dark.png"
               height="575"
               width="200"
-            className="rounded-3xl object-cover shadow-xl dark:border dark:border-zinc-700"
+            className="rounded-3xl object-cover shadow-xl dark:border dark:border-zinc-700 animate-appear"
             alt="thumbnail"
           />
         </TabsContent>

@@ -12,7 +12,7 @@ export default function Improvements() {
   ];
 
   return (
-    <div className="mx-auto my-16 max-w-7xl px-10">
+    <div className="mx-auto mt-16 mb-8 md:mb-16 max-w-7xl px-10">
       <div className="text-[11px] font-medium uppercase tracking-wider text-center lg:text-left">{heading}</div>
       <div className='flex justify-center lg:block'>
       <div className="my-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
