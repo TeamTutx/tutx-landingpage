@@ -14,7 +14,7 @@ export default function Information() {
     <div className="flex flex-col md:flex-row py-16 bg-primary/5">
       <div className="flex w-full md:w-2/5 pb-12 md:pb-0">
         <div className="flex items-center justify-center text-5xl font-extrabold leading-tight">
-          <div className="text-center pl-4">
+          <div className="text-center lg:pl-16">
             <TextGenerateEffect words={words} className="text-5xl font-extrabold leading-tight" highlights={['All','Institute']} />
           </div>
         </div>
