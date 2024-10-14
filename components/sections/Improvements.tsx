@@ -12,13 +12,14 @@ export default function Improvements() {
   ];
 
   return (
-    <div className="mx-auto my-16 max-w-7xl px-10 max-w-screen">
-      <div className="text-[11px] font-medium uppercase tracking-wider">{heading}</div>
-      <div className="my-8 flex space-x-28">
+    <div className="mx-auto my-16 max-w-7xl px-10">
+      <div className="text-[11px] font-medium uppercase tracking-wider text-center lg:text-left">{heading}</div>
+      <div className='flex justify-center lg:block'>
+      <div className="my-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-10">
         {stats.map((stat, index) => (
-          <div key={index}>
+          <div key={index} className="flex flex-col items-center justify-center sm:block">
             <div className="flex items-center text-lg">
-              <stat.icon size={16} className="mr-2" />
+              <stat.icon size={20} className="mr-2" />
               {stat.name}
             </div>
             <div className="flex items-center text-sm font-semibold">
@@ -28,6 +29,7 @@ export default function Improvements() {
             <div className="text-sm text-muted-foreground">{stat.label}</div>
           </div>
         ))}
+      </div>
       </div>
     </div>
   );
