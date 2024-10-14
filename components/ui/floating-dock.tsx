@@ -71,7 +71,7 @@ const FloatingDockDesktop = ({
     <motion.div
       onMouseMove={(e) => mouseX.set(e.pageX)}
       onMouseLeave={() => mouseX.set(Infinity)}
-      className={cn('mx-auto hidden h-16 items-end gap-4 rounded-full px-4 pb-3 md:flex', className)}
+      className={cn('mx-auto h-16 items-end gap-4 rounded-full px-4 pb-3 flex', className)}
     >
       {items.map((item) => (
         <IconContainer mouseX={mouseX} key={item.title} {...item} />

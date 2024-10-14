@@ -24,13 +24,13 @@ export default function Themes() {
   return (
     <div id="themes" className="mt-32 flex flex-col items-center bg-primary/5 py-20">
       <div className="w-full text-center text-5xl font-extrabold leading-tight">
-        <TextGenerateEffect words={words} className="text-5xl font-extrabold leading-tight" highlights={['experience']} />
+        <TextGenerateEffect words={words} className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight px-4 sm:px-10" highlights={['experience']} />
       </div>
-      <div className="w-full pt-2 text-center text-sm text-muted-foreground">{subheading}</div>
+      <div className="w-full pt-4 md:pt-2 text-center text-sm text-muted-foreground px-10">{subheading}</div>
       <div className="pb-10 pt-4">
         <Dock />
       </div>
-      <div className="relative h-[400px] w-[700px]">
+      <div className="relative h-[400px] w-[500px] sm:w-[600px] md:w-[700px]">
         {' '}
         {/* Adjust width and height as necessary */}
         {/* Light Image */}
