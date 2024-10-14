@@ -4,7 +4,6 @@ import { Navbar } from '@/components/sections/Navbar';
 import Improvements from '@/components/sections/Improvements';
 import Information from '@/components/sections/Information';
 import Institute from '@/components/sections/Institute';
-import Courses from '@/components/sections/Courses';
 import Dashboard from '@/components/sections/Dashboard';
 import Themes from '@/components/sections/Themes';
 import Story from '@/components/sections/Story';
@@ -13,6 +12,7 @@ import Articles from '@/components/sections/Articles';
 import Tagline from '@/components/sections/Tagline';
 import Contact from '@/components/sections/Contact';
 import Payments from '@/components/sections/Payments';
+import Courses from '@/components/sections/Courses';
 
 export default function Home() {
   return (

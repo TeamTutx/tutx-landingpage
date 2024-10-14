@@ -1,5 +1,5 @@
 import { MoveRight, CreditCard, BadgeDollarSign, Receipt } from 'lucide-react';
-import TestTabs from '../custom/test-tabs copy';
+import PaymentTabs from '../custom/payment-tabs';
 
 
 export default function Payments() {
@@ -17,7 +17,7 @@ export default function Payments() {
   return (
     <div id="institute" className="mx-auto mt-28 flex flex-col-reverse lg:flex-row max-w-7xl min-h-[525px] lg:max-h-[525px]">
       <div className="w-full lg:w-7/12">
-        <TestTabs />
+        <PaymentTabs />
       </div>
       <div className="flex w-full flex-col items-center lg:items-start lg:w-5/12 p-4 lg:pr-8 lg:pt-8">
         <div className="text-3xl md:text-4xl font-extrabold leading-tight text-center lg:text-left">{heading}</div>
