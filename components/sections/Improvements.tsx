@@ -12,7 +12,7 @@ export default function Improvements() {
   ];
 
   return (
-    <div className="mx-auto my-16 max-w-7xl px-10">
+    <div className="mx-auto my-16 max-w-7xl px-10 max-w-screen">
       <div className="text-[11px] font-medium uppercase tracking-wider">{heading}</div>
       <div className="my-8 flex space-x-28">
         {stats.map((stat, index) => (
