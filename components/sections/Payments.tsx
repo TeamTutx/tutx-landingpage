@@ -15,7 +15,7 @@ export default function Payments() {
   ];
 
   return (
-    <div id="institute" className="mx-auto mt-28 flex flex-col-reverse lg:flex-row max-w-7xl min-h-[525px] lg:max-h-[525px]">
+    <div id="payments" className="mx-auto mt-28 flex flex-col-reverse lg:flex-row max-w-7xl min-h-[520px] lg:max-h-[520px]">
       <div className="w-full lg:w-7/12">
         <PaymentTabs />
       </div>
@@ -37,7 +37,7 @@ export default function Payments() {
         </div>
 
         <div className="group flex cursor-pointer items-center text-primary mt-4 mb-12">
-          Get Started
+          Jump In
           <MoveRight
             className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
             strokeWidth={1}

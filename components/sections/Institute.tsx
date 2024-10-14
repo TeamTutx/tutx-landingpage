@@ -14,7 +14,7 @@ export default function Institute() {
   ];
 
   return (
-    <div id="institute" className="mx-auto mt-28 flex flex-col-reverse lg:flex-row max-w-7xl min-h-[500px] lg:max-h-[500px]">
+    <div id="institute" className="mx-auto mt-32 flex flex-col-reverse lg:flex-row max-w-7xl min-h-[460px] lg:max-h-[460px]">
       <div className="w-full lg:w-7/12">
         <StepTabs />
       </div>
@@ -22,7 +22,6 @@ export default function Institute() {
         <div className="text-3xl md:text-4xl font-extrabold leading-tight text-center lg:text-left">{heading}</div>
         <div className="mt-4 text-sm text-muted-foreground text-center lg:text-left">{subheading}</div>
 
-        {/* Map over points to generate the content */}
         <div className="my-8 space-y-4 text-sm">
           {points.map((point, index) => {
             const IconComponent = point.icon;

@@ -14,7 +14,7 @@ export default function Courses() {
   ];
 
   return (
-    <div id="institute" className="mx-auto mt-28 flex min-h-[500px] max-w-7xl flex-col lg:max-h-[500px] lg:flex-row">
+    <div id="courses" className="mx-auto mt-28 flex min-h-[450px] max-w-7xl flex-col lg:max-h-[450px] lg:flex-row">
       <div className="flex w-full flex-col items-center py-4 px-4 lg:pr-0 lg:pl-16 lg:w-5/12 lg:items-start">
         <div className="text-center text-3xl font-extrabold leading-tight md:text-4xl lg:text-left">{heading}</div>
         <div className="mt-4 text-center text-sm text-muted-foreground lg:text-left">{subheading}</div>
