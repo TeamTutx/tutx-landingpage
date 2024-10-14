@@ -30,7 +30,7 @@ export default function Themes() {
       <div className="pb-10 pt-4">
         <Dock />
       </div>
-      <div className="relative h-[400px] w-[500px] sm:w-[600px] md:w-[700px]">
+      <div className="relative h-[300px] sm:h-[400px] w-[500px] sm:w-[600px] md:w-[700px]">
         {' '}
         {/* Adjust width and height as necessary */}
         {/* Light Image */}

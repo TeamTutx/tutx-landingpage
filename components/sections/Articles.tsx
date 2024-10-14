@@ -21,8 +21,8 @@ export default function Articles() {
   ];
 
   return (
-    <div className="mx-auto flex max-w-7xl items-center justify-center p-16 py-32">
-      <div className="flex-1 space-y-4">
+    <div className="mx-auto flex flex-col lg:flex-row w-full lg:max-w-7xl items-center justify-center px-12 py-32">
+      <div className="flex-1 pb-8">
         <div className="text-4xl font-extrabold leading-tight">More from Tutx</div>
         <div className="group flex cursor-pointer items-center text-primary">
           Browse articles
@@ -32,9 +32,10 @@ export default function Articles() {
           />
         </div>
       </div>
-
+      <div className='flex flex-col md:flex-row'>
       {articles.map((article) => (
-        <PinContainer key={article.title} title="/linkedin.com" href={article.link}>
+        <div className='mb-16'>
+                  <PinContainer key={article.title} title="/linkedin.com" href={article.link}>
           <div className="flex h-[20rem] w-[20rem] basis-full flex-col p-4 tracking-tight text-black dark:text-white/50 sm:basis-1/2">
             <h3 className="!m-0 max-w-xs !pb-2 text-base font-bold text-black dark:text-white">{article.title}</h3>
             <div className="!m-0 !p-0 text-base font-normal">
@@ -45,7 +46,9 @@ export default function Articles() {
             </div>
           </div>
         </PinContainer>
+        </div>
       ))}
+      </div>
     </div>
   );
 }

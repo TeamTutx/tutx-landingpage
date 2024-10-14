@@ -67,7 +67,7 @@ export function About() {
             <motion.div
               layoutId={`card-${active.title}-${id}`}
               ref={ref}
-              className="flex h-full w-full max-w-[500px] flex-col overflow-hidden bg-white dark:bg-neutral-900 sm:rounded-3xl md:h-fit md:max-h-[90%]"
+              className="flex h-3/4 w-full max-w-[500px] flex-col overflow-hidden bg-white dark:bg-neutral-900 sm:rounded-3xl md:h-fit md:max-h-[90%]"
             >
               <motion.div layoutId={`image-${active.title}-${id}`}>
                 <Image
@@ -124,14 +124,14 @@ export function About() {
             onClick={() => setActive(card)}
             className="flex cursor-pointer flex-col items-center justify-between rounded-xl p-4 hover:bg-neutral-50 dark:hover:bg-neutral-800 md:flex-row"
           >
-            <div className="flex flex-col gap-4 md:flex-row">
+            <div className="flex flex-col items-center gap-4 md:flex-row">
               <motion.div layoutId={`image-${card.title}-${id}`}>
                 <Image
                   width={100}
                   height={100}
                   src={card.src}
                   alt={card.title}
-                  className="h-40 w-40 rounded-lg object-cover object-top md:h-14 md:w-14"
+                  className="h-28 w-28 rounded-lg object-cover object-top md:h-14 md:w-14"
                 />
               </motion.div>
               <div className="">
