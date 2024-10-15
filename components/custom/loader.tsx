@@ -23,11 +23,20 @@ const loadingStates = [
 
 export default function StepLoader() {
   const [loading, setLoading] = useState(false);
+
+  const startLoading = () => {
+    setLoading(true);
+
+    setTimeout(() => {
+      setLoading(false);
+    }, 10000);
+  };
+
   return (
     <div className="flex items-center justify-center">
       <Loader loadingStates={loadingStates} loading={loading} duration={2000} />
 
-      <button onClick={() => setLoading(true)} className="group flex cursor-pointer items-center text-primary">
+      <button onClick={startLoading} className="group flex cursor-pointer items-center text-primary">
         <a href="#demo">
           Get a demo
           <MoveRight
