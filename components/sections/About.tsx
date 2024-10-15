@@ -199,7 +199,7 @@ const cards = [
   {
     description: 'UI/UX Designer · Full Stack Developer',
     title: 'Sheel Taskar',
-    src: '/pic1.jpg',
+    src: '/pic1.JPG',
     ctaText: 'Play',
     ctaLink: 'https://www.linkedin.com/in/sheel-taskar/',
     content: () => {
@@ -218,7 +218,7 @@ const cards = [
   {
     description: 'Content Writer · Frontend Developer',
     title: 'Supril Singh',
-    src: '/pic2.jpg',
+    src: '/pic2.JPG',
     ctaText: 'Play',
     ctaLink: 'https://www.linkedin.com/in/supril-singh/',
     content: () => {
@@ -237,7 +237,7 @@ const cards = [
   {
     description: 'Client Outreach · Backend Developer',
     title: 'Harshit Gupta',
-    src: '/pic3.jpg',
+    src: '/pic3.JPG',
     ctaText: 'Play',
     ctaLink: 'https://www.linkedin.com/in/harshit-gupta-a2111312a/',
     content: () => {

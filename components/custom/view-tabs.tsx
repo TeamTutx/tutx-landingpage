@@ -19,7 +19,7 @@ export default function ViewTabs() {
       <div className='px-0 sm:px-4 md:px-12 w-full'>
         <TabsContent value="web" className="flex justify-center">
             <Image
-              src="/zinc-light.png"
+              src="/Zinc-light.png"
               height="625"
               width="625"
               className="rounded-md animate-appear border border-muted-foreground/20 object-cover mt-12 shadow-xl dark:border-zinc-900"
