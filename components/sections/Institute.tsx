@@ -1,5 +1,6 @@
 import { MoveRight, Building, BookMarked, TrendingUp, GraduationCap } from 'lucide-react';
 import StepTabs from '../custom/step-tabs';
+import Link from 'next/link';
 
 export default function Institute() {
   const heading = 'Build and Customize Your Institute Profile';
@@ -14,33 +15,33 @@ export default function Institute() {
   ];
 
   return (
-    <div id="institute" className="mx-auto mt-32 flex flex-col-reverse lg:flex-row max-w-7xl min-h-[460px] lg:max-h-[460px]">
+    <div id="institute" className="mx-auto mt-32 flex min-h-[460px] max-w-7xl flex-col-reverse lg:max-h-[460px] lg:flex-row">
       <div className="w-full lg:w-7/12">
         <StepTabs />
       </div>
-      <div className="flex w-full flex-col items-center lg:items-start lg:w-5/12 p-4 ">
-        <div className="text-3xl md:text-4xl font-extrabold leading-tight text-center lg:text-left">{heading}</div>
-        <div className="mt-4 text-sm text-muted-foreground text-center lg:text-left">{subheading}</div>
+      <div className="flex w-full flex-col items-center p-4 lg:w-5/12 lg:items-start">
+        <div className="text-center text-3xl font-extrabold leading-tight md:text-4xl lg:text-left">{heading}</div>
+        <div className="mt-4 text-center text-sm text-muted-foreground lg:text-left">{subheading}</div>
 
         <div className="my-8 space-y-4 text-sm">
           {points.map((point, index) => {
             const IconComponent = point.icon;
             return (
               <div key={index} className="flex items-center">
-                <IconComponent className="mr-3 h-[20px] max-h-[20px] min-h-[20px] w-[20px] min-w-[20px] inline text-primary" size={20} />
+                <IconComponent className="mr-3 inline h-[20px] max-h-[20px] min-h-[20px] w-[20px] min-w-[20px] text-primary" size={20} />
                 {point.text}
               </div>
             );
           })}
         </div>
 
-        <div className="group flex cursor-pointer items-center text-primary mt-4 mb-12">
+        <Link href={'#demo'} className="group mb-12 mt-4 flex cursor-pointer items-center text-primary">
           Get Started
           <MoveRight
             className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
             strokeWidth={1}
           />
-        </div>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,6 @@
 import { BellRing, ChartColumn, MoveRight } from 'lucide-react';
 import DashboardTabs from '../custom/dashboard-tabs';
-
+import Link from 'next/link';
 
 export default function Dashboard() {
   const heading = 'Financial Reporting for Informed Decisions';
@@ -14,7 +14,7 @@ export default function Dashboard() {
 
   return (
     <div id="dashboard" className="mx-auto mt-28 flex min-h-[450px] max-w-7xl flex-col lg:max-h-[450px] lg:flex-row">
-      <div className="flex w-full flex-col items-center py-4 px-4 lg:pr-0 lg:pl-16 lg:w-5/12 lg:items-start">
+      <div className="flex w-full flex-col items-center px-4 py-4 lg:w-5/12 lg:items-start lg:pl-16 lg:pr-0">
         <div className="text-center text-3xl font-extrabold leading-tight md:text-4xl lg:text-left">{heading}</div>
         <div className="mt-4 text-center text-sm text-muted-foreground lg:text-left">{subheading}</div>
 
@@ -31,13 +31,13 @@ export default function Dashboard() {
           })}
         </div>
 
-        <div className="group mb-12 mt-4 flex cursor-pointer items-center text-primary">
+        <Link href={'#demo'} className="group mb-12 mt-4 flex cursor-pointer items-center text-primary">
           See in Action
           <MoveRight
             className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"
             strokeWidth={1}
           />
-        </div>
+        </Link>
       </div>
       <div className="w-full lg:w-7/12">
         <DashboardTabs />

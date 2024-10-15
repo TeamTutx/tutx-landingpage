@@ -11,7 +11,7 @@ export default function Information() {
   ];
 
   return (
-    <div className="flex flex-col md:flex-row py-16 bg-primary/5">
+    <div id="information" className="flex flex-col md:flex-row py-16 bg-primary/5">
       <div className="flex w-full md:w-2/5 pb-12 md:pb-0">
         <div className="flex items-center justify-center text-5xl font-extrabold leading-tight">
           <div className="text-center lg:pl-16">

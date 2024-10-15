@@ -17,37 +17,37 @@ export default function Footer() {
     {
       heading: 'Product',
       links: [
-        { name: 'Use case', href: '/product/use-case' },
-        { name: 'Why Tutx', href: '/product/why-tutx' },
-        { name: 'UI/UX', href: '/product/ui-ux' },
-        { name: 'Themes', href: '/product/themes' },
-        { name: 'Team', href: '/product/team' }
+        { name: 'Use case', href: '#institute' },
+        { name: 'Why Tutx', href: '#information' },
+        { name: 'Articles', href: '#articles' },
+        { name: 'Themes', href: '#themes' },
+        { name: 'Team', href: '#about' }
       ]
     },
     {
       heading: 'Use Case',
       links: [
-        { name: 'Institutes', href: '/use-case/institutes' },
-        { name: 'Teachers', href: '/use-case/teachers' },
-        { name: 'Students', href: '/use-case/students' }
+        { name: 'Institutes', href: '#institutes' },
+        { name: 'Teachers', href: '#courses' },
+        { name: 'Students', href: '#courses' }
       ]
     },
     {
       heading: 'Features',
       links: [
-        { name: 'Institutes', href: '/features/institutes' },
-        { name: 'Subjects', href: '/features/subjects' },
-        { name: 'Students', href: '/features/students' },
-        { name: 'Batches', href: '/features/batches' },
-        { name: 'Payments', href: '/features/payments' }
+        { name: 'Institutes', href: '#institutes' },
+        { name: 'Subjects', href: '#courses' },
+        { name: 'Students', href: '#courses' },
+        { name: 'Batches', href: '#institutes' },
+        { name: 'Payments', href: '#payments' }
       ]
     },
     {
       heading: 'Company',
       links: [
-        { name: 'About Us', href: '/company/about-us' },
-        { name: 'Our Team', href: '/company/our-team' },
-        { name: 'Contact', href: '/company/contact' }
+        { name: 'About Us', href: '#about' },
+        { name: 'Our Team', href: '#story' },
+        { name: 'Contact', href: '#contact' }
       ]
     }
   ];
@@ -78,8 +78,9 @@ export default function Footer() {
               <TutxBlack className="h-10" showText={true} white={true}></TutxBlack>
               <div className="pt-4 text-sm text-white text-opacity-70">© 2024 Tutx.</div>
               <div className="flex space-x-4 pt-4 text-white">
-                <Linkedin strokeWidth={1.2} size={20} />
-                <Mail strokeWidth={1.2} size={20} />
+                <Link target="_blank" href="https://www.linkedin.com/in/sheel-taskar/"><Linkedin strokeWidth={1.2} size={20} /></Link>
+                <Link href="mailto:sheeltaskar65@gmail.com"><Mail strokeWidth={1.2} size={20} /></Link>
+
               </div>
             </div>
           </div>
