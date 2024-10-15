@@ -1,7 +1,7 @@
 import { FlaskConical, Pipette, TestTube, Undo } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
-export default function TemplateB() {
+export default function Template() {
   return (
     <div className="w-full bg-primary/90 px-28 pb-8 pt-16">
       <div className="text-4xl font-extrabold leading-tight text-background/80">Build it better with Tutx</div>
