@@ -205,11 +205,12 @@ const cards = [
     content: () => {
       return (
         <p>
-          Lana Del Rey, an iconic American singer-songwriter, is celebrated for her melancholic and cinematic music style. Born Elizabeth
-          Woolridge Grant in New York City, she has captivated audiences worldwide with her haunting voice and introspective lyrics. <br />{' '}
-          <br /> Her songs often explore themes of tragic romance, glamour, and melancholia, drawing inspiration from both contemporary and
-          vintage pop culture. With a career that has seen numerous critically acclaimed albums, Lana Del Rey has established herself as a
-          unique and influential figure in the music industry, earning a dedicated fan base and numerous accolades.
+          Meet Sheel, a tech wizard who solves complex problems faster than he can finish a bowl of his legendary Butter Chicken. As a
+          full-stack developer and data scientist, he's basically a one-person tech dream team, turning tangled code into smooth, efficient
+          solutions while sprinkling in data insights like magic. <br /> <br /> At LTIMindtree, Sheel played tag with the ever-shifting tech
+          landscape, nailing full-stack projects and having a lot of fun. Also, he's a Liverpool FC fanatic, so expect him to slip a “You'll
+          Never Walk Alone” reference into your next code review. Oh, and if you're lucky, you might just score an invite to try his famous
+          Gulab Jamun!
         </p>
       );
     }
@@ -223,11 +224,11 @@ const cards = [
     content: () => {
       return (
         <p>
-          Babu Maan, a legendary Punjabi singer, is renowned for his soulful voice and profound lyrics that resonate deeply with his
-          audience. Born in the village of Khant Maanpur in Punjab, India, he has become a cultural icon in the Punjabi music industry.{' '}
-          <br /> <br /> His songs often reflect the struggles and triumphs of everyday life, capturing the essence of Punjabi culture and
-          traditions. With a career spanning over two decades, Babu Maan has released numerous hit albums and singles that have garnered him
-          a massive fan following both in India and abroad.
+          Meet Supril, a tech wizard with expertise in Java, Python, Go, React, and AWS, boasting over three years of experience building
+          scalable solutions. As a Senior Cloud Application Developer at ZS Associates, he's tackled everything from creating a migration
+          toolkit that slashed man-hours by 50% to designing sleek microservices that keep systems running at 99.9% availability. <br />{' '}
+          <br /> Supril loves crafting cutting-edge apps, mentoring teammates, and optimizing cloud architectures. When he's not busy in the
+          tech world, you can find him hitting the gym or exploring new travel destinations.
         </p>
       );
     }
@@ -242,11 +243,11 @@ const cards = [
     content: () => {
       return (
         <p>
-          Metallica, an iconic American heavy metal band, is renowned for their powerful sound and intense performances that resonate deeply
-          with their audience. Formed in Los Angeles, California, they have become a cultural icon in the heavy metal music industry. <br />{' '}
-          <br /> Their songs often reflect themes of aggression, social issues, and personal struggles, capturing the essence of the heavy
-          metal genre. With a career spanning over four decades, Metallica has released numerous hit albums and singles that have garnered
-          them a massive fan following both in the United States and abroad.
+          Meet Harshit, a skilled software engineer with a passion for problem-solving and coding. Specializing in building high-performance
+          e-commerce websites, he re-designed and developed a new flow in Go that boosted search index efficiency, releasing it with zero
+          bugs. <br /> <br /> His innovations and algorithm integrations led to generating billions in additional monthly revenue. A GATE
+          CSE qualifier with experience in clearing MTech interviews for IITs, Harshit brings a sharp technical mind to every project. When
+          not optimizing code, he's driving business value through creative solutions and program management.
         </p>
       );
     }
