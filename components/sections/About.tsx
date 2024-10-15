@@ -206,10 +206,10 @@ const cards = [
       return (
         <p>
           Meet Sheel, a tech wizard who solves complex problems faster than he can finish a bowl of his legendary Butter Chicken. As a
-          full-stack developer and data scientist, he's basically a one-person tech dream team, turning tangled code into smooth, efficient
+          full-stack developer and data scientist, he&apos;s basically a one-person tech dream team, turning tangled code into smooth, efficient
           solutions while sprinkling in data insights like magic. <br /> <br /> At LTIMindtree, Sheel played tag with the ever-shifting tech
-          landscape, nailing full-stack projects and having a lot of fun. Also, he's a Liverpool FC fanatic, so expect him to slip a “You'll
-          Never Walk Alone” reference into your next code review. Oh, and if you're lucky, you might just score an invite to try his famous
+          landscape, nailing full-stack projects and having a lot of fun. Also, he&apos;s a Liverpool FC fanatic, so expect him to slip a “You&apos;ll
+          Never Walk Alone” reference into your next code review. Oh, and if you&apos;re lucky, you might just score an invite to try his famous
           Gulab Jamun!
         </p>
       );
@@ -225,9 +225,9 @@ const cards = [
       return (
         <p>
           Meet Supril, a tech wizard with expertise in Java, Python, Go, React, and AWS, boasting over three years of experience building
-          scalable solutions. As a Senior Cloud Application Developer at ZS Associates, he's tackled everything from creating a migration
+          scalable solutions. As a Senior Cloud Application Developer at ZS Associates, he&apos;s tackled everything from creating a migration
           toolkit that slashed man-hours by 50% to designing sleek microservices that keep systems running at 99.9% availability. <br />{' '}
-          <br /> Supril loves crafting cutting-edge apps, mentoring teammates, and optimizing cloud architectures. When he's not busy in the
+          <br /> Supril loves crafting cutting-edge apps, mentoring teammates, and optimizing cloud architectures. When he&apos;s not busy in the
           tech world, you can find him hitting the gym or exploring new travel destinations.
         </p>
       );
@@ -247,7 +247,7 @@ const cards = [
           e-commerce websites, he re-designed and developed a new flow in Go that boosted search index efficiency, releasing it with zero
           bugs. <br /> <br /> His innovations and algorithm integrations led to generating billions in additional monthly revenue. A GATE
           CSE qualifier with experience in clearing MTech interviews for IITs, Harshit brings a sharp technical mind to every project. When
-          not optimizing code, he's driving business value through creative solutions and program management.
+          not optimizing code, he&apos;s driving business value through creative solutions and program management.
         </p>
       );
     }

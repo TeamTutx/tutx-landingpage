@@ -16,10 +16,11 @@ export default function Contact() {
 
   const subheading = 'Reach out to our team to see how your agency can benefit from Tutx.';
 
-  const onSubmit = async (event: any) => {
+  const onSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    const formData = new FormData(event.target);
+    const form = event.target as HTMLFormElement;
+    const formData = new FormData(form);
     const firstName = formData.get('firstName') as string;
     const lastName = formData.get('lastName') as string;
     const email = formData.get('email') as string;
@@ -60,12 +61,13 @@ export default function Contact() {
       if (result.success) {
         setResult('Message sent successfully. We will get back to you shortly.');
         setTextColor('text-green-600');
-        event.target.reset();
+        form.reset();
       } else {
         setResult('Something went wrong. Please try again later.');
         setTextColor('text-red-500');
       }
     } catch (error) {
+      console.error(error);
       setResult('Something went wrong. Please try again later.');
       setTextColor('text-red-500');
     }
