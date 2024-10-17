@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="flex w-full flex-col items-center lg:items-start pt-4 lg:w-2/5">
         <div className="text-center text-[50px] font-extrabold leading-tight lg:text-left">{heading}</div>
         <div className="mt-8 text-center text-sm text-muted-foreground lg:text-left">{subheading}</div>
-        <div className="my-8 space-y-2 text-sm">
+        <div className="my-8 space-y-6 text-sm">
           {features.map((bullet) => (
             <div className="flex items-center" key={bullet}>
               <BadgeCheck

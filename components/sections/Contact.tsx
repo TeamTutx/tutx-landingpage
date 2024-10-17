@@ -93,7 +93,7 @@ export default function Contact() {
         </div>
       </div>
       <div className="w-full flex-1 items-center p-4 pt-8 md:w-1/2">
-        <form className="space-y-4" onSubmit={onSubmit}>
+        <form className="space-y-6" onSubmit={onSubmit}>
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2">
             <div>
               <Label htmlFor="firstName" className="text-muted-foreground">

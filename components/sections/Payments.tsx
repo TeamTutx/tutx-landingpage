@@ -15,7 +15,7 @@ export default function Payments() {
   ];
 
   return (
-    <div id="payments" className="mx-auto mt-28 flex min-h-[520px] max-w-7xl flex-col-reverse lg:max-h-[520px] lg:flex-row">
+    <div id="payments" className="mx-auto mt-20 lg:mt-28 flex min-h-[520px] max-w-7xl flex-col-reverse lg:max-h-[520px] lg:flex-row">
       <div className="w-full lg:w-7/12">
         <PaymentTabs />
       </div>
@@ -24,7 +24,7 @@ export default function Payments() {
         <div className="mt-4 text-center text-sm text-muted-foreground lg:text-left">{subheading}</div>
 
         {/* Map over points to generate the content */}
-        <div className="my-8 space-y-4 text-sm">
+        <div className="my-8 space-y-6 text-sm">
           {points.map((point, index) => {
             const IconComponent = point.icon;
             return (

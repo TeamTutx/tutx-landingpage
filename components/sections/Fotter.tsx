@@ -54,7 +54,7 @@ export default function Footer() {
 
   const renderFooterLinks = () => {
     return footerLinks.map((section) => (
-      <div key={section.heading} className="space-y-4 text-sm text-white text-opacity-70">
+      <div key={section.heading} className="space-y-6 text-sm text-white text-opacity-70">
         <div className="pb-2 text-base font-semibold text-white text-opacity-90">{section.heading}</div>
         {section.links.map((link) => (
           <Link key={link.name} href={link.href} className="block">

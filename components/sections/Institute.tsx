@@ -23,7 +23,7 @@ export default function Institute() {
         <div className="text-center text-3xl font-extrabold leading-tight md:text-4xl lg:text-left">{heading}</div>
         <div className="mt-4 text-center text-sm text-muted-foreground lg:text-left">{subheading}</div>
 
-        <div className="my-8 space-y-4 text-sm">
+        <div className="my-8 space-y-6 text-sm">
           {points.map((point, index) => {
             const IconComponent = point.icon;
             return (
