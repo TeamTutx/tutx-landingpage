@@ -1,41 +1,44 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    output: 'standalone',
-    experimental: {
-      optimizeCss: true,
-    },
-    webpack: (config, { isServer }) => {
-      // Enable tree shaking and minification
-      config.optimization.minimize = true;
-      
-      if (!isServer) {
-        // Split chunks for client bundles
-        config.optimization.splitChunks = {
-          chunks: 'all',
-          minSize: 20000,
-          maxSize: 24000000, // Keep chunks under 24MB
-          cacheGroups: {
-            default: false,
-            vendors: false,
-            commons: {
-              name: 'commons',
-              chunks: 'all',
-              minChunks: 2,
-            },
-            lib: {
-              test: /[\\/]node_modules[\\/]/,
-              name(module) {
-                const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-                return `npm.${packageName.replace('@', '')}`;
-              },
-              chunks: 'all',
-              minChunks: 1,
-            },
+  output: 'export', // Changed from 'standalone' to 'export'
+  images: {
+    unoptimized: true, // Required for static export
+  },
+  experimental: {
+    optimizeCss: true,
+  },
+  webpack: (config, { isServer }) => {
+    config.optimization.minimize = true;
+    
+    if (!isServer) {
+      config.optimization.splitChunks = {
+        chunks: 'all',
+        minSize: 10000,
+        maxSize: 20000000, // Reduced to 20MB
+        cacheGroups: {
+          default: false,
+          vendors: false,
+          framework: {
+            name: 'framework',
+            chunks: 'all',
+            test: /[\\/]node_modules[\\/](react|react-dom|next)[\\/]/,
+            priority: 40,
+            enforce: true,
           },
-        };
-      }
-      return config;
-    },
-  };
-  
-  export default nextConfig;
+          lib: {
+            test: /[\\/]node_modules[\\/]/,
+            name(module) {
+              const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
+              return `npm.${packageName.replace('@', '')}`;
+            },
+            priority: 30,
+            minChunks: 1,
+          },
+        },
+      };
+    }
+    return config;
+  },
+};
+
+export default nextConfig;
