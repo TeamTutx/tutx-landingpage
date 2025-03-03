@@ -8,6 +8,7 @@ const nextConfig = {
     optimizeCss: true,
   },
   distDir: '.next',
+  // Remove any eslint configurations from here
   webpack: (config, { isServer }) => {
     config.optimization.minimize = true;
     
@@ -29,7 +30,6 @@ const nextConfig = {
           lib: {
             test: /[\\/]node_modules[\\/]/,
             name(module) {
-              // Add null check and fallback
               if (!module.context) return 'vendor';
               const match = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/);
               return match ? `npm.${match[1].replace('@', '')}` : 'vendor';
