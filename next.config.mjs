@@ -7,6 +7,15 @@ const nextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  // Add build cache configuration
+  distDir: '.next',
+  generateBuildId: async () => {
+    return 'build-' + Date.now();
+  },
+  onDemandEntries: {
+    maxInactiveAge: 25 * 1000,
+    pagesBufferLength: 2,
+  },
   webpack: (config, { isServer }) => {
     config.optimization.minimize = true;
     
