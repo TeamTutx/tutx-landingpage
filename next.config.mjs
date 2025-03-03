@@ -1,21 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', // Changed from 'standalone' to 'export'
+  output: 'export',
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
   experimental: {
     optimizeCss: true,
   },
-  // Add build cache configuration
   distDir: '.next',
-  generateBuildId: async () => {
-    return 'build-' + Date.now();
-  },
-  onDemandEntries: {
-    maxInactiveAge: 25 * 1000,
-    pagesBufferLength: 2,
-  },
   webpack: (config, { isServer }) => {
     config.optimization.minimize = true;
     
@@ -23,7 +15,7 @@ const nextConfig = {
       config.optimization.splitChunks = {
         chunks: 'all',
         minSize: 10000,
-        maxSize: 20000000, // Reduced to 20MB
+        maxSize: 20000000,
         cacheGroups: {
           default: false,
           vendors: false,
@@ -37,8 +29,10 @@ const nextConfig = {
           lib: {
             test: /[\\/]node_modules[\\/]/,
             name(module) {
-              const packageName = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/)[1];
-              return `npm.${packageName.replace('@', '')}`;
+              // Add null check and fallback
+              if (!module.context) return 'vendor';
+              const match = module.context.match(/[\\/]node_modules[\\/](.*?)([\\/]|$)/);
+              return match ? `npm.${match[1].replace('@', '')}` : 'vendor';
             },
             priority: 30,
             minChunks: 1,
