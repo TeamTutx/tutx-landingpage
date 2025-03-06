@@ -24,18 +24,18 @@ export default function Home() {
         <Hero2/>
         {/* <Improvements /> */}
         <Features />
-        <Information />
+        <Information/>
         <Institute />
         <Courses />
         <Payments />
         <Dashboard />
-        <Themes />
-        <Story />
-        <About />
-        <Articles />
-        <Tagline />
-        <Contact />
-        <Footer />
+        <Themes/>
+        <Story/>
+        <About/>
+        <Articles/>
+        <Tagline/>
+        <Contact/>
+        <Footer/>
       </div>
     </div>
   );

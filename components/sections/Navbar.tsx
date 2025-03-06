@@ -125,6 +125,11 @@ export function Navbar() {
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem className="hidden lg:block">
+                <Link href="/pricing" legacyBehavior passHref>
+                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>Pricing</NavigationMenuLink>
+                </Link>
+              </NavigationMenuItem>
+              <NavigationMenuItem className="hidden lg:block">
                 <Link href="#about" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us</NavigationMenuLink>
                 </Link>
@@ -149,6 +154,7 @@ export function Navbar() {
           <Link href="#courses">Features</Link>
           <Link href="#themes">Themes</Link>
           <Link href="#story">Our Story</Link>
+          <Link href="/pricing">Pricing</Link>
           <Link href="#about">About Us</Link>
           <Link href="#demo">Book a Demo</Link>
         </div>

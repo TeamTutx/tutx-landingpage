@@ -1,6 +1,9 @@
+"use client";
 import TutxBlack from '@/components/custom/tutx';
-import { Linkedin, Mail, Heart } from 'lucide-react';
+import { Linkedin, Mail, Heart, Instagram, Twitter, Facebook } from 'lucide-react';
 import Link from 'next/link';
+
+import React from "react";
 
 export default function Footer() {
   type LinkItem = {
@@ -52,48 +55,90 @@ export default function Footer() {
     }
   ];
 
+  const socialLinks = [
+    { icon: Linkedin, href: "https://www.linkedin.com/in/sheel-taskar/", label: "LinkedIn" },
+    { icon: Twitter, href: "#", label: "Twitter" },
+    { icon: Instagram, href: "#", label: "Instagram" },
+    { icon: Facebook, href: "#", label: "Facebook" },
+    { icon: Mail, href: "mailto:sheeltaskar65@gmail.com", label: "Email" },
+  ];
+
   const renderFooterLinks = () => {
     return footerLinks.map((section) => (
-      <div key={section.heading} className="space-y-6 text-sm text-white text-opacity-70">
-        <div className="pb-2 text-base font-semibold text-white text-opacity-90">{section.heading}</div>
-        {section.links.map((link) => (
-          <Link key={link.name} href={link.href} className="block">
-            {link.name}
-          </Link>
-        ))}
+      <div key={section.heading} className="space-y-4 text-sm">
+        <h3 className="text-base font-semibold text-white">{section.heading}</h3>
+        <ul className="space-y-3">
+          {section.links.map((link) => (
+            <li key={link.name}>
+              <Link 
+                href={link.href} 
+                className="text-gray-300 hover:text-white transition-colors duration-200 ease-in-out hover:underline"
+              >
+                {link.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
       </div>
     ));
   };
 
   return (
-    <div className="bg-zinc-900 p-16 pb-0 dark:bg-background">
-      <div className="mx-auto max-w-7xl">
-        <div className="flex flex-col sm:flex-row">
-          {/* Updated Grid */}
-          <div className="grid grid-cols-2 gap-8 lg:grid-cols-4 justify-center mx-auto flex-1">
-            {renderFooterLinks()}
-          </div>
-          <div className="w-full sm:w-32 pt-10 sm:pt-0">
-            <div className="flex flex-col items-center justify-center">
-              <TutxBlack className="h-10" showText={true} white={true}></TutxBlack>
-              <div className="pt-4 text-sm text-white text-opacity-70">© 2024 Tutx.</div>
-              <div className="flex space-x-4 pt-4 text-white">
-                <Link target="_blank" href="https://www.linkedin.com/in/sheel-taskar/"><Linkedin strokeWidth={1.2} size={20} /></Link>
-                <Link href="mailto:sheeltaskar65@gmail.com"><Mail strokeWidth={1.2} size={20} /></Link>
-
+   
+    <footer className="bg-gradient-to-br from-zinc-900 to-zinc-800 dark:from-zinc-900 dark:to-black">
+      <div className="mx-auto max-w-7xl px-6 py-12 md:py-16">
+        {/* Top section */}
+        <div className="relative pb-10">
+          {/* Removed the gradient border line that was here */}
+          
+          <div className="grid grid-cols-1 gap-y-10 gap-x-8 pt-10 lg:grid-cols-5">
+            {/* Logo and company info */}
+            <div className="lg:col-span-1">
+              <div className="flex flex-col items-start">
+                <TutxBlack className="h-12" showText={true} white={true} />
+                <p className="mt-4 text-sm text-gray-300 max-w-xs">
+                  Empowering education through innovative management solutions for tutoring institutes.
+                </p>
+                
+                {/* Social links */}
+                <div className="mt-6 flex space-x-4">
+                  {socialLinks.map((social) => (
+                    <Link 
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-400 hover:text-white transition-colors duration-200"
+                      aria-label={social.label}
+                    >
+                      <social.icon strokeWidth={1.5} size={20} />
+                    </Link>
+                  ))}
+                </div>
               </div>
+            </div>
+            
+            {/* Links sections */}
+            <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-4">
+              {renderFooterLinks()}
             </div>
           </div>
         </div>
-        <div className="pb-4 pt-12 text-center text-sm text-white text-opacity-70">
-          <span>Brought to you with</span>
-          <span>
-            {' '}
-            <Heart className="inline" size={15} strokeWidth={3}></Heart>{' '}
-          </span>
-          <span>by friendly folks at @Tutx.</span>
+      
+        {/* Bottom section */}
+        <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
+          <div className="text-sm text-gray-400">
+            © {new Date().getFullYear()} Tutx. All rights reserved.
+          </div>
+          
+          <div className="mt-4 md:mt-0 flex items-center">
+            <span className="text-sm text-gray-400 flex items-center">
+              Crafted with <Heart className="inline mx-1 text-red-500" size={14} strokeWidth={2} fill="currentColor" /> by the folks at Tutx
+            </span>
+          </div>
         </div>
       </div>
-    </div>
+    </footer>
+    
   );
 }
