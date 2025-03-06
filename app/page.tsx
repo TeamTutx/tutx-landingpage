@@ -13,14 +13,17 @@ import Tagline from '@/components/sections/Tagline';
 import Contact from '@/components/sections/Contact';
 import Payments from '@/components/sections/Payments';
 import Courses from '@/components/sections/Courses';
+import Hero2 from '@/components/sections/Hero2';
+import Features from '@/components/sections/Features';
 
 export default function Home() {
   return (
     <div className="min-h-screen max-w-screen">
       <Navbar />
       <div className="overflow-x-hidden">
-        <Hero />
-        <Improvements />
+        <Hero2/>
+        {/* <Improvements /> */}
+        <Features />
         <Information />
         <Institute />
         <Courses />
