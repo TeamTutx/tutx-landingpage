@@ -17,7 +17,7 @@ export default function DashboardTabs() {
         {images.map((image) => {
           return (
             <TabsContent value={image} key={image} className='flex justify-center'>
-              <div className="animate-appear w-full md:w-3/4">
+              <div className="animate-appear w-full md:w-[95%] lg:w-[90%] xl:w-[95%]">
                 <ParallexCard src={image} />
               </div>
             </TabsContent>

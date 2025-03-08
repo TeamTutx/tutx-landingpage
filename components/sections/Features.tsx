@@ -3,7 +3,7 @@ import { cn } from '@/lib/utils';
 
 export default function Features() {
   const heading = "Tutx provides a comprehensive suite of tools designed specifically for coaching institutes of all sizes.";
-  const subheading = "Everything You Need to Run Your Coaching Institute";
+  const subheading = "Classes, Courses, Payments? \nWe Handle the Tech, You Do the Teaching! 🎯";
 
   const features = [
     { 
@@ -64,7 +64,7 @@ export default function Features() {
           {features.map((feature, index) => (
             <div 
               key={index} 
-              className="relative overflow-hidden rounded-lg border bg-background p-6 shadow-sm transition-all hover:shadow-md hover:border-primary/50"
+              className="relative overflow-hidden rounded-lg border bg-gradient-to-br from-background to-primary/5 p-6 shadow-sm transition-all hover:shadow-md hover:border-primary/50 hover:from-background hover:to-primary/10"
             >
               <div className="flex items-center text-primary mb-4">
                 <div className="p-2 rounded-full bg-primary/10">

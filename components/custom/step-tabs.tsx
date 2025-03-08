@@ -1,39 +1,61 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Building, BookMarked, LibraryBig, GraduationCap } from 'lucide-react';
+import { BookOpen, Users, Calendar, BarChart } from 'lucide-react';
 import ParallexCard from '../custom/parallex-card';
 
 export default function StepTabs() {
-  const images = ['/step1.png', '/step2.png', '/step3.png', '/step4.png'];
-  return (
-    <Tabs defaultValue="/step1.png" className="flex h-full w-full flex-col items-center">
-      <TabsList className="w-1/4 space-x-12 mb-4">
-        <TabsTrigger value="/step1.png" className="flex flex-col space-y-1 pb-4">
-          <Building />
-          <span className="text-xs">Step 1</span>
-        </TabsTrigger>
-        <TabsTrigger value="/step2.png" className="flex flex-col space-y-1 pb-4">
-          <BookMarked />
-          <span className="text-xs">Step 2</span>
-        </TabsTrigger>
-        <TabsTrigger value="/step3.png" className="flex flex-col space-y-1 pb-4">
-          <LibraryBig />
-          <span className="text-xs">Step 3</span>
-        </TabsTrigger>
-        <TabsTrigger value="/step4.png" className="flex flex-col space-y-1 pb-4">
-          <GraduationCap />
-          <span className="text-xs">Step 4</span>
-        </TabsTrigger>
-      </TabsList>
+  const steps = [
+    { 
+      id: "create-course", 
+      icon: BookOpen, 
+      label: "Create Course", 
+      image: "/Create Course.png",
+      description: "Create courses and add subjects with detailed descriptions"
+    },
+    { 
+      id: "enroll-students", 
+      icon: Users, 
+      label: "Enroll Students", 
+      image: "/Create Enrollment.png",
+      description: "Easily enroll students to courses and track their progress"
+    },
+    { 
+      id: "create-batch", 
+      icon: Calendar, 
+      label: "Create Batch", 
+      image: "/Create Batch.png",
+      description: "Create batches, assign subjects, and schedule classes"
+    },
+    { 
+      id: "assign-students", 
+      icon: BarChart, 
+      label: "Assign Students", 
+      image: "/Assign Students.png",
+      description: "Assign Studnent to Batches"
+    }
+  ];
 
-        {images.map((image) => {
+  return (
+    <Tabs defaultValue="create-course" className="flex h-full w-full flex-col items-center">
+      <TabsList className="grid w-full grid-cols-4 mb-6">
+        {steps.map((step) => {
+          const IconComponent = step.icon;
           return (
-            <TabsContent value={image} key={image} className='flex justify-center'>
-              <div className="animate-appear w-full md:w-3/4">
-                <ParallexCard src={image} />
-              </div>
-            </TabsContent>
+            <TabsTrigger key={step.id} value={step.id} className="flex flex-col space-y-1 py-2">
+              <IconComponent className="h-5 w-5" />
+              <span className="text-xs">{step.label}</span>
+            </TabsTrigger>
           );
         })}
+      </TabsList>
+
+      {steps.map((step) => (
+        <TabsContent key={step.id} value={step.id} className="flex w-full flex-col items-center">
+          <div className="animate-appear w-full md:w-[95%] lg:w-[90%] xl:w-[95%]">
+            <ParallexCard src={step.image} />
+            <p className="text-center text-sm text-muted-foreground mt-2">{step.description}</p>
+          </div>
+        </TabsContent>
+      ))}
     </Tabs>
   );
 }

@@ -1,17 +1,17 @@
-import { MoveRight, CreditCard, BadgeDollarSign, Receipt } from 'lucide-react';
+import { MoveRight, CreditCard, MessageCircleDashedIcon, BadgeDollarSign, Receipt } from 'lucide-react';
 import PaymentTabs from '../custom/payment-tabs';
 import Link from 'next/link';
 
 export default function Payments() {
-  const heading = 'Track Payments and Generate Invoices';
+  const heading = 'Track Payments Falwlessly and Generate Receipts';
   const subheading =
-    'Track payments and fees in real time, automate invoicing to reduce manual work, and offer students a variety of convenient payment options.';
+    'Track payments and fees in real time, automated invoicing to reduce manual work.';
 
   // Points and their corresponding icon components
   const points = [
     { icon: BadgeDollarSign, text: 'Easily track student payments and manage them in real-time.' },
-    { icon: Receipt, text: 'Automatically generate detailed invoices for each transaction made.' },
-    { icon: CreditCard, text: 'Set up your own payment portal to streamline collections.' }
+    { icon: Receipt, text: 'Automatically generate detailed receipt for each transaction made.' },
+    { icon: MessageCircleDashedIcon, text: 'Send timely WhatsApp/email reminders that boost payment collection for upcoming & overdue fees.' }
   ];
 
   return (
@@ -20,23 +20,27 @@ export default function Payments() {
         <PaymentTabs />
       </div>
       <div className="flex w-full flex-col items-center p-4 lg:w-5/12 lg:items-start lg:pr-8 lg:pt-8">
-        <div className="text-center text-3xl font-extrabold leading-tight md:text-4xl lg:text-left">{heading}</div>
-        <div className="mt-4 text-center text-sm text-muted-foreground lg:text-left">{subheading}</div>
+        <div className="ml-4 text-center text-3xl font-extrabold leading-tight md:text-4xl lg:text-left">{heading}</div>
+        <div className="ml-4 mt-4 text-center text-sm text-muted-foreground lg:text-left">{subheading}</div>
 
         {/* Map over points to generate the content */}
-        <div className="my-8 space-y-6 text-sm">
+        <div className="ml-4 my-8 space-y-6 text-sm">
           {points.map((point, index) => {
             const IconComponent = point.icon;
             return (
-              <div key={index} className="flex items-center">
-                <IconComponent className="mr-3 inline h-[20px] max-h-[20px] min-h-[20px] w-[20px] min-w-[20px] text-primary" size={20} />
-                {point.text}
+              <div key={index} className="flex items-center rounded-lg hover:bg-slate-50 transition-colors duration-200 group">
+                <div className="mr-3 p-2 rounded-full bg-primary/10 text-primary">
+                  <IconComponent size={20} />
+                </div>
+                <span className="font-medium group-hover:text-primary transition-colors duration-200">
+                  {point.text}
+                </span>
               </div>
             );
           })}
         </div>
 
-        <Link href={'#demo'} className="group mb-12 mt-4 flex cursor-pointer items-center text-primary">
+        <Link href={'#demo'} className="group mb-12 m-4 flex cursor-pointer items-center text-primary rounded-md p-4">
           Jump In
           <MoveRight
             className="ml-3 inline transform transition-transform duration-300 ease-in-out group-hover:translate-x-2"

@@ -3,7 +3,7 @@ import Hero from '@/components/sections/Hero';
 import { Navbar } from '@/components/sections/Navbar';
 import Improvements from '@/components/sections/Improvements';
 import Information from '@/components/sections/Information';
-import Institute from '@/components/sections/Institute';
+import Process from '@/components/sections/Process';
 import Dashboard from '@/components/sections/Dashboard';
 import Themes from '@/components/sections/Themes';
 import Story from '@/components/sections/Story';
@@ -15,6 +15,7 @@ import Payments from '@/components/sections/Payments';
 import Courses from '@/components/sections/Courses';
 import Hero2 from '@/components/sections/Hero2';
 import Features from '@/components/sections/Features';
+import Pricing2 from '@/components/sections/Pricing2';
 
 export default function Home() {
   return (
@@ -25,14 +26,15 @@ export default function Home() {
         {/* <Improvements /> */}
         <Features />
         <Information/>
-        <Institute />
-        <Courses />
+        <Process/>
         <Payments />
         <Dashboard />
+        <Courses />
         <Themes/>
         <Story/>
-        <About/>
-        <Articles/>
+        <Pricing2/>
+        {/* <About/> */}
+        {/* <Articles/> */}
         <Tagline/>
         <Contact/>
         <Footer/>

@@ -1,27 +1,32 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { LibraryBig, Book } from 'lucide-react';
+import { LibraryBig, Book, Users, BarChart2 } from 'lucide-react';
 import ParallexCard from './parallex-card';
 
 
 export default function SubjectTabs() {
-  const images = ['/course.png', '/subject.png'];
+  const images = ['/Courses.png', '/Batches.png', '/StudentInsights.png'];
   return (
-    <Tabs defaultValue="/course.png" className="flex h-full w-full flex-col items-center">
-      <TabsList className="w-1/4 space-x-12 mb-4">
-        <TabsTrigger value="/course.png" className="flex flex-col space-y-1 pb-4">
+    <Tabs defaultValue="/Courses.png" className="flex h-full w-full flex-col items-center">
+      <TabsList className="w-full md:w-3/4 space-x-4 md:space-x-8 mb-4">
+        <TabsTrigger value="/Courses.png" className="flex flex-col space-y-1 pb-4">
           <LibraryBig />
           <span className="text-xs">Courses</span>
         </TabsTrigger>
-        <TabsTrigger value="/subject.png" className="flex flex-col space-y-1 pb-4">
-        <Book />
-          <span className="text-xs">Subjects</span>
+       
+        <TabsTrigger value="/Batches.png" className="flex flex-col space-y-1 pb-4">
+          <Users />
+          <span className="text-xs">Batches</span>
+        </TabsTrigger>
+        <TabsTrigger value="/StudentInsights.png" className="flex flex-col space-y-1 pb-4">
+          <BarChart2 />
+          <span className="text-xs">Student Insights</span>
         </TabsTrigger>
       </TabsList>
 
         {images.map((image) => {
           return (
             <TabsContent value={image} key={image} className='flex justify-center'>
-              <div className="animate-appear w-full md:w-3/4">
+              <div className="animate-appear w-full md:w-[95%] lg:w-[90%] xl:w-[95%]">
                 <ParallexCard src={image} />
               </div>
             </TabsContent>
