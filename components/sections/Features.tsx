@@ -1,9 +1,9 @@
 import { Users, BookOpen, Receipt, CalendarCheck, MessageSquare, Filter, BarChart2, Scale } from 'lucide-react';
-import { cn } from '@/lib/utils';
+
 
 export default function Features() {
   const heading = "Tutx provides a comprehensive suite of tools designed specifically for coaching institutes of all sizes.";
-  const subheading = "Classes, Courses, Payments? \nWe Handle the Tech, You Do the Teaching! 🎯";
+  const subheading = "Classes, Courses, Payments?\nWe Handle the Tech, You Do the Teaching! 🎯";
 
   const features = [
     { 
@@ -52,7 +52,7 @@ export default function Features() {
     <section className="py-16 bg-gradient-to-b from-background to-muted/30">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-3">
+          <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-3 whitespace-pre-line">
             {subheading}
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

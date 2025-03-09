@@ -1,5 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { LibraryBig, Book, Users, BarChart2 } from 'lucide-react';
+import { LibraryBig,  Users, BarChart2 } from 'lucide-react';
 import ParallexCard from './parallex-card';
 
 

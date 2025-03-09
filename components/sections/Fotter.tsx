@@ -5,6 +5,31 @@ import Link from 'next/link';
 
 import React from "react";
 
+// Indian Flag SVG component
+const IndianFlag = ({ className = "h-4 w-6 inline mx-1" }) => (
+  <svg className={className} viewBox="0 0 900 600" xmlns="http://www.w3.org/2000/svg">
+    <rect width="900" height="200" fill="#FF9933" />
+    <rect width="900" height="200" y="200" fill="#FFFFFF" />
+    <rect width="900" height="200" y="400" fill="#138808" />
+    <circle cx="450" cy="300" r="60" fill="#000080" />
+    <circle cx="450" cy="300" r="50" fill="#FFFFFF" />
+    <circle cx="450" cy="300" r="8.74" fill="#000080" />
+    <g fill="#000080">
+      {[...Array(24)].map((_, i) => (
+        <line 
+          key={i}
+          x1="450"
+          y1="300"
+          x2={450 + 40 * Math.cos(i * Math.PI / 12)}
+          y2={300 + 40 * Math.sin(i * Math.PI / 12)}
+          strokeWidth="2"
+          stroke="#000080"
+        />
+      ))}
+    </g>
+  </svg>
+);
+
 export default function Footer() {
   type LinkItem = {
     name: string;
@@ -131,10 +156,15 @@ export default function Footer() {
             © {new Date().getFullYear()} Tutx. All rights reserved.
           </div>
           
+          <span className="text-sm text-gray-400 ml-2 flex items-center">
+              Proudly made in <IndianFlag /> India
+            </span>
+
           <div className="mt-4 md:mt-0 flex items-center">
             <span className="text-sm text-gray-400 flex items-center">
               Crafted with <Heart className="inline mx-1 text-red-500" size={14} strokeWidth={2} fill="currentColor" /> by the folks at Tutx
             </span>
+           
           </div>
         </div>
       </div>

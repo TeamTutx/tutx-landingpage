@@ -1,4 +1,4 @@
-import { MoveRight, BookOpen, Users, Calendar, BarChart,UserPlus } from 'lucide-react';
+import { MoveRight, BookOpen, Users, Calendar,UserPlus } from 'lucide-react';
 import StepTabs from '../custom/step-tabs';
 import Link from 'next/link';
 

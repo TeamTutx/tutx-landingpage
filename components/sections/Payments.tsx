@@ -1,4 +1,4 @@
-import { MoveRight, CreditCard, MessageCircleDashedIcon, BadgeDollarSign, Receipt } from 'lucide-react';
+import { MoveRight,  MessageCircleDashedIcon, BadgeDollarSign, Receipt } from 'lucide-react';
 import PaymentTabs from '../custom/payment-tabs';
 import Link from 'next/link';
 

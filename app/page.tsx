@@ -1,14 +1,12 @@
 import Footer from '@/components/sections/Fotter';
-import Hero from '@/components/sections/Hero';
 import { Navbar } from '@/components/sections/Navbar';
-import Improvements from '@/components/sections/Improvements';
+
 import Information from '@/components/sections/Information';
 import Process from '@/components/sections/Process';
 import Dashboard from '@/components/sections/Dashboard';
 import Themes from '@/components/sections/Themes';
-import Story from '@/components/sections/Story';
-import { About } from '@/components/sections/About';
-import Articles from '@/components/sections/Articles';
+import OtherRequirement from '@/components/sections/OtherRequirement';
+
 import Tagline from '@/components/sections/Tagline';
 import Contact from '@/components/sections/Contact';
 import Payments from '@/components/sections/Payments';
@@ -31,7 +29,7 @@ export default function Home() {
         <Dashboard />
         <Courses />
         <Themes/>
-        <Story/>
+        <OtherRequirement/>
         <Pricing2/>
         {/* <About/> */}
         {/* <Articles/> */}

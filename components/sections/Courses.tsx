@@ -1,4 +1,4 @@
-import { BookCopy, User, Users, MoveRight, Filter, BarChart2, Bell } from 'lucide-react';
+import { BookCopy,  MoveRight, Filter,  Bell } from 'lucide-react';
 import SubjectTabs from '../custom/courses-tabs';
 import Link from 'next/link';
 
