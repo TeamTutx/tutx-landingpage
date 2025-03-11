@@ -17,25 +17,25 @@ import Pricing2 from '@/components/sections/Pricing2';
 
 export default function Home() {
   return (
-    <div className="min-h-screen max-w-screen">
+    <div className="max-w-screen min-h-screen">
       <Navbar />
       <div className="overflow-x-hidden">
-        <Hero2/>
+        <Hero2 />
         {/* <Improvements /> */}
         <Features />
-        <Information/>
-        <Process/>
+        <Information />
+        <Process />
         <Payments />
         <Dashboard />
         <Courses />
-        <Themes/>
-        <OtherRequirement/>
-        <Pricing2/>
+        <Themes />
+        <OtherRequirement />
+        <Pricing2 />
         {/* <About/> */}
         {/* <Articles/> */}
-        <Tagline/>
-        <Contact/>
-        <Footer/>
+        <Tagline />
+        <Contact />
+        <Footer />
       </div>
     </div>
   );

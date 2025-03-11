@@ -4,10 +4,10 @@ import Footer from '@/components/sections/Fotter';
 
 export default function PricingPage() {
   return (
-    <div className="min-h-screen max-w-screen">
+    <div className="max-w-screen min-h-screen">
       <Navbar />
       <div className="overflow-x-hidden py-16">
-        <h1 className="text-center text-4xl font-bold mb-8">Our Pricing Plans</h1>
+        <h1 className="mb-8 text-center text-4xl font-bold">Our Pricing Plans</h1>
         <PricingSectionDemo />
       </div>
       <Footer />
