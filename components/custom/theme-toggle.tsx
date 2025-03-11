@@ -37,12 +37,12 @@ export function ThemeToggle() {
         <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
         <span className="sr-only">Toggle theme</span>
       </Button>
-      <Select value={themeColor} onValueChange={(value) => setThemeColor(value as ThemeColors)} defaultValue={themeColor}>
+      {/* <Select value={themeColor} onValueChange={(value) => setThemeColor(value as ThemeColors)} defaultValue={themeColor}>
         <SelectTrigger className="ml-1 border-none p-0 ring-offset-transparent focus:ring-transparent" rightIcon={false}>
           <SelectValue />
         </SelectTrigger>
         <SelectContent className="min-w-0 border-muted z-[110] -translate-x-2">{createSelectItems()}</SelectContent>
-      </Select>
+      </Select> */}
     </>
   );
 }

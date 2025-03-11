@@ -18,7 +18,7 @@ export default function Hero2() {
           <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center mb-8 sm:mb-12 sm:mt-12 md:mb-24 lg:mb-32 pt-6 md:pt-16">
             <MovingBorderButton
               borderRadius="1.75rem"
-              className="scale-75 sm:scale-90 md:scale-100 bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
+              className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
             >
               <span className='p-1 mx-1 text-sm sm:text-base'>Coaching Management Made Simple</span>
             </MovingBorderButton>

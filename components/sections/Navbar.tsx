@@ -3,7 +3,6 @@
 import * as React from 'react';
 import Link from 'next/link';
 import TutxBlack from '@/components/custom/tutx';
-import { ThemeToggle } from '@/components/custom/theme-toggle';
 import { Menu, X } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
@@ -20,6 +19,7 @@ import {
 import RocketButton from '@/components/custom/rocket-button';
 import { useState, useEffect } from 'react';
 import Doodle from '../custom/doodle';
+import { ThemeToggle } from '@/components/custom/theme-toggle';
 
 const components: { title: string; href: string; description: string }[] = [
   {
@@ -64,6 +64,18 @@ export function Navbar() {
     }, 5000);
     return () => clearTimeout(timer);
   }, []);
+
+  // Add this effect to close the menu when screen size changes
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 768 && isClick) {
+        setisClick(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [isClick]);
 
   return (
     <div className="sticky top-0 z-[100] border-b border-primary/5 px-4 py-4 backdrop-blur-[25px] sm:px-8">
@@ -137,11 +149,11 @@ export function Navbar() {
             </NavigationMenuList>
           </NavigationMenu>
         </div>
-        <div className="hidden md:flex">
-          <RocketButton />
+        <div className="hidden md:flex items-center">
           <ThemeToggle />
+          <RocketButton />
         </div>
-        <div className="flex items-center space-x-4 md:hidden">
+        <div className="flex items-center md:hidden">
           <ThemeToggle />
           <button onClick={() => setisClick(!isClick)} className="transition-all hover:scale-125">
             {!isClick ? <Menu /> : <X />}
@@ -149,15 +161,20 @@ export function Navbar() {
         </div>
       </div>
       {isClick && (
-        <div className="animate-slideInDown absolute z-10 flex w-full flex-col items-end space-y-2 overflow-hidden pr-8 pt-2 text-sm md:hidden">
-          <Link href="#institue">Use Cases</Link>
-          <Link href="#courses">Features</Link>
-          <Link href="#themes">Themes</Link>
-          <Link href="#story">Our Story</Link>
-          <Link href="/pricing">Pricing</Link>
-          <Link href="#about">About Us</Link>
-          <Link href="#demo">Book a Demo</Link>
-          <Link href="/privacy-page">Privacy Policy</Link>
+        <div className="fixed inset-0 top-[61px] z-10 flex flex-col backdrop-blur-sm">
+          <div className="flex flex-col space-y-4 p-6 text-lg font-medium bg-background text-foreground border-t border-border shadow-md">
+            <Link href="#institue" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Use Cases</Link>
+            <Link href="#courses" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Features</Link>
+            <Link href="#themes" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Themes</Link>
+            <Link href="#story" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Our Story</Link>
+            <Link href="/pricing" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Pricing</Link>
+            <Link href="#about" className="border-b border-border pb-2" onClick={() => setisClick(false)}>About Us</Link>
+            <Link href="#demo" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Book a Demo</Link>
+            <Link href="/privacy-policy" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Privacy Policy</Link>
+            <div className="mt-4 flex justify-center">
+              <RocketButton />
+            </div>
+          </div>
         </div>
       )}
 

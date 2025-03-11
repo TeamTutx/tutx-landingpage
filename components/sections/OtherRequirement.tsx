@@ -2,10 +2,7 @@
 import { TypewriterEffectSmooth } from '@/components/ui/typewriter-effect';
 import Image from 'next/image';
 
-
 export default function OtherRequirement() {
-  
-  
   const words = [
     {
       text: 'Need'
@@ -40,41 +37,42 @@ export default function OtherRequirement() {
   };
 
   return (
-    <div id="other-requirement" className="relative flex flex-col md:flex-row items-stretch min-h-max m-14">
+    <div id="other-requirement" className="relative flex flex-col md:flex-row items-stretch min-h-max py-20 px-8 md:px-14 bg-background dark:bg-background">
       {/* Left side with image */}
-      <div className="w-full md:w-1/3 h-[300px] md:h-auto relative">
-        <div className="absolute inset-0 overflow-hidden">
+      <div className="w-full md:w-2/5 h-[400px] md:h-auto relative mb-10 md:mb-0">
+        <div className="absolute inset-0 overflow-hidden flex items-center justify-center">
           <Image 
             src="/Hi.svg" 
             alt="Say Hi" 
-            fill
+            width={500}
+            height={500}
             priority
-            className="object-contain grayscale transition-all duration-500 hover:grayscale-0"
-            style={{ filter: 'brightness(1.1) contrast(1.2)' }} 
+            className="object-contain transition-all duration-500 hover:scale-105 dark:invert-[0.15]"
+            style={{ maxWidth: '100%', height: 'auto' }}
           />
         </div>
       </div>
       
       {/* Right side with content */}
-      <div className="w-full md:w-2/3 flex flex-col justify-center">
-        <div className="flex items-center justify-center md:justify-start text-4xl md:text-5xl font-extrabold leading-tight">
+      <div className="w-full md:w-3/5 flex flex-col justify-center">
+        <div className="flex items-center justify-center md:justify-start text-5xl md:text-6xl font-extrabold leading-tight mb-6">
           <TypewriterEffectSmooth words={words} />
         </div>
         
         <div className="w-full max-w-2xl">
-          <p className="text-muted-foreground text-lg mb-8">{additionalInfo}</p>
+          <p className="text-muted-foreground dark:text-gray-300 text-xl mb-10">{additionalInfo}</p>
           
-          <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col sm:flex-row gap-6">
             <a
               href="#demo"
               onClick={scrollToContact}
-              className="rounded-md bg-primary px-6 py-3 text-lg font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:scale-105 shadow-md"
+              className="rounded-md bg-primary px-8 py-4 text-lg font-medium text-primary-foreground transition-all hover:bg-primary/90 hover:scale-105 shadow-md"
             >
               Say Hi
             </a>
             <a
               href="tel:+1234567890"
-              className="rounded-md border border-input bg-background px-6 py-3 text-lg font-medium transition-all hover:bg-accent hover:text-accent-foreground hover:scale-105 shadow-sm"
+              className="rounded-md border border-input bg-background dark:bg-background/30 px-8 py-4 text-lg font-medium transition-all hover:bg-accent hover:text-accent-foreground hover:scale-105 shadow-sm"
             >
               Call Us
             </a>
