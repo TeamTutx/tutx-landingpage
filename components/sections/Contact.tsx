@@ -86,9 +86,9 @@ export default function Contact() {
         </div>
         <div className="text-sm text-muted-foreground">{subheading}</div>
         <div className="text-bold text-center text-primary md:text-left">
-          <Link href="mailto:sheeltaskar65@gamil.com">
+          <Link href="mailto:support@tutx.co.in">
             <MessageCircle className="mb-1 mr-3 inline" size={20} strokeWidth={1.5} />
-            sheeltaskar64@gmail.com
+            support@tutx.co.in
           </Link>
         </div>
       </div>

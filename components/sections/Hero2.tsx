@@ -49,7 +49,7 @@ export default function Hero2() {
         }
       >
         <Image
-          src="/Dashboard.png"
+          src="/dashboard.png"
           alt="hero"
           width={1400}
           height={780}

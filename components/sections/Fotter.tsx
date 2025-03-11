@@ -75,7 +75,8 @@ export default function Footer() {
       links: [
         { name: 'About Us', href: '#about' },
         { name: 'Our Team', href: '#story' },
-        { name: 'Contact', href: '#contact' }
+        { name: 'Contact', href: '#contact' },
+        { name: 'Privacy Policy', href: '/privacy-policy' }
       ]
     }
   ];
