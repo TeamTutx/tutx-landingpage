@@ -8,28 +8,28 @@ export default function StepTabs() {
       id: "create-course", 
       icon: BookOpen, 
       label: "Create Course", 
-      image: "/Create Course.png",
+      image: "/create-course.png",
       description: "Create courses and add subjects with detailed descriptions"
     },
     { 
       id: "enroll-students", 
       icon: Users, 
       label: "Enroll Students", 
-      image: "/Create Enrollment.png",
+      image: "/create-enrollment.png",
       description: "Easily enroll students to courses and track their progress"
     },
     { 
       id: "create-batch", 
       icon: Calendar, 
       label: "Create Batch", 
-      image: "/Create Batch.png",
+      image: "/create-batch.png",
       description: "Create batches, assign subjects, and schedule classes"
     },
     { 
       id: "assign-students", 
       icon: BarChart, 
       label: "Assign Students", 
-      image: "/Assign Students.png",
+      image: "/assign-students.png",
       description: "Assign Studnent to Batches"
     }
   ];
