@@ -11,14 +11,14 @@ import { Slider } from '../ui/slider'
 const pricingOptions = [
   {
     students: 100,
-    price: "₹300",
+    price: "₹2,000",
     features: ["Manage Students", "Create Courses & Subjects", "Basic Fee Management", "Attendance Tracking", "Email Notifications", "Basic Analytics"],
     cta: "Get started",
     href: "/signup",
   },
   {
     students: 500,
-    price: "₹500",
+    price: "₹3,500",
     features: ["Everything in Basic", "Advanced Fee Management", "WhatsApp Reminders", "Advanced Filters", "Batch Management", "Enhanced Analytics", "Priority Support"],
     cta: "Get started",
     href: "/signup",
@@ -26,13 +26,13 @@ const pricingOptions = [
   },
   {
     students: 1000,
-    price: "₹700",
+    price: "₹5,000",
     features: ["Everything in Standard", "Advanced Reporting", "Custom Dashboards", "API Access", "Data Export", "Dedicated Support", "Custom Integrations"],
     cta: "Get started",
     href: "/signup",
   },
   {
-    students: 1001, // Changed from 5000 to 1001 to match our new threshold
+    students: 1001,
     price: "Custom",
     features: ["Everything in Premium", "Enterprise Support", "Dedicated Account Manager", "Custom Development", "White-labeling", "On-premise Option", "Training Sessions"],
     cta: "Contact us",
