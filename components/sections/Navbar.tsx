@@ -47,11 +47,7 @@ const components: { title: string; href: string; description: string }[] = [
     href: '#dashboard',
     description: 'Send timely fee collection reminders to students and parents to ensure prompt payments.'
   },
-  {
-    title: 'Personalized Platform Experience',
-    href: '#dashboard',
-    description: "Customize your platform with unique themes and colors that reflect your institute's branding."
-  }
+
 ];
 
 export function Navbar() {
@@ -127,13 +123,8 @@ export function Navbar() {
                 </NavigationMenuContent>
               </NavigationMenuItem>
               <NavigationMenuItem className="hidden lg:block">
-                <Link href="/pricing" legacyBehavior passHref>
+                <Link href="#pricing" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Pricing</NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
-              <NavigationMenuItem className="hidden lg:block">
-                <Link href="#about" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>About Us</NavigationMenuLink>
                 </Link>
               </NavigationMenuItem>
               <NavigationMenuItem className="hidden lg:block">
@@ -161,7 +152,6 @@ export function Navbar() {
             <Link href="#institue" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Use Cases</Link>
             <Link href="#courses" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Features</Link>
             <Link href="/pricing" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Pricing</Link>
-            <Link href="#about" className="border-b border-border pb-2" onClick={() => setisClick(false)}>About Us</Link>
             <Link href="#demo" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Book a Demo</Link>
             <Link href="/privacy-policy" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Privacy Policy</Link>
             <div className="mt-4 flex justify-center">
