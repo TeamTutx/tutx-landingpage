@@ -1,44 +1,79 @@
-import React from 'react'
+'use client';
+
+import React, { useState, useEffect } from 'react'
 import { Card, CardContent } from '../ui/card'
 import { CheckCircle } from 'lucide-react'
 import { Button } from '../ui/button'
 import Link from 'next/link'
+import { Slider } from '../ui/slider'
 
-const pricingTiers = [
+// Define the pricing tiers based on student count
+const pricingOptions = [
   {
-    name: "Starter",
-    price: "₹999",
-    description: "Perfect for new coaching centers",
-    features: ["Up to 100 students", "Basic analytics", "Fee management", "Course creation", "Email support"],
-    cta: "Start Free Trial",
+    students: 100,
+    price: "₹300",
+    features: ["Manage Students", "Create Courses & Subjects", "Basic Fee Management", "Attendance Tracking", "Email Notifications", "Basic Analytics"],
+    cta: "Get started",
     href: "/signup",
   },
   {
-    name: "Growth",
-    price: "₹2,499",
-    description: "For established coaching institutes",
-    features: [
-      "Up to 1000 students",
-      "Advanced analytics",
-      "WhatsApp reminders",
-      "Attendance tracking",
-      "Priority support",
-    ],
-    cta: "Start Free Trial",
+    students: 500,
+    price: "₹500",
+    features: ["Everything in Basic", "Advanced Fee Management", "WhatsApp Reminders", "Advanced Filters", "Batch Management", "Enhanced Analytics", "Priority Support"],
+    cta: "Get started",
     href: "/signup",
     popular: true,
   },
   {
-    name: "Enterprise",
-    price: "Custom",
-    description: "For large-scale operations",
-    features: ["Unlimited students", "Custom reporting", "API access", "Dedicated account manager", "24/7 support"],
-    cta: "Contact Sales",
-    href: "#contact",
+    students: 1000,
+    price: "₹700",
+    features: ["Everything in Standard", "Advanced Reporting", "Custom Dashboards", "API Access", "Data Export", "Dedicated Support", "Custom Integrations"],
+    cta: "Get started",
+    href: "/signup",
   },
+  {
+    students: 1001, // Changed from 5000 to 1001 to match our new threshold
+    price: "Custom",
+    features: ["Everything in Premium", "Enterprise Support", "Dedicated Account Manager", "Custom Development", "White-labeling", "On-premise Option", "Training Sessions"],
+    cta: "Contact us",
+    href: "#contact",
+  }
 ]
 
+// Student count markers for the slider
+const studentMarkers = [100, 500, 1000, 2000, 3000, 4000, 5000]
+
 export function Pricing2() {
+  const [studentCount, setStudentCount] = useState(500)
+  const [selectedTier, setSelectedTier] = useState(pricingOptions[1])
+  
+  // Update the selected tier based on student count
+  useEffect(() => {
+    for (let i = pricingOptions.length - 1; i >= 0; i--) {
+      if (studentCount >= pricingOptions[i].students) {
+        setSelectedTier(pricingOptions[i])
+        break
+      }
+    }
+  }, [studentCount])
+
+  // Handle slider change
+  const handleSliderChange = (value: number[]) => {
+    setStudentCount(value[0])
+  }
+
+  // Find the closest marker value for display
+  // const getClosestMarker = () => {
+  //   return studentMarkers.reduce((prev, curr) => {
+  //     return (Math.abs(curr - studentCount) < Math.abs(prev - studentCount) ? curr : prev)
+  //   })
+  // }
+
+  // Format number with commas
+  const formatNumber = (num: number) => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",")
+  }
+
   return (
     <section id="pricing" className="py-12 md:py-24 lg:py-32 bg-muted">
       <div className="container px-4 md:px-6 mx-auto">
@@ -52,28 +87,72 @@ export function Pricing2() {
           </div>
         </div>
         
-        <div className="mx-auto grid w-full grid-cols-1 gap-6 py-12 sm:grid-cols-2 lg:grid-cols-3">
-          {pricingTiers.map((tier, index) => (
+        {/* Slider Section */}
+        <div className="mt-12 mb-16 max-w-4xl mx-auto">
+          <div className="mb-8">
+    
+            <Slider 
+              defaultValue={[studentCount]} 
+              max={2000} 
+              min={0} 
+              step={10} 
+              onValueChange={handleSliderChange}
+              className="mb-8"
+            />
+            <div className="flex justify-between text-xs text-muted-foreground mt-2">
+              {studentMarkers.filter(marker => marker <= 2000).map((marker, index) => (
+                <span key={index} className="relative">
+                  {marker >= 1000 ? `${marker/1000}K` : formatNumber(marker)}
+                </span>
+              ))}
+            </div>
+          </div>
+          
+          <div className="text-center mb-8">
+            <p className="text-lg text-muted-foreground">
+              {studentCount > 1000 ? 
+                "Custom plan for 1,000+ students" : 
+                `${formatNumber(studentCount)} students`}
+            </p>
+          </div>
+        </div>
+        
+        {/* Pricing Cards */}
+        <div className="mx-auto grid w-full grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {pricingOptions.map((tier, index) => (
+            // Update the card highlighting logic
             <Card
               key={index}
               className={`border transition-all duration-300 hover:translate-y-[-8px] ${
-                tier.popular ? "border-primary shadow-lg relative" : "shadow-md hover:shadow-lg"
+                (studentCount > 1000 && tier.students > 1000) || 
+                (studentCount <= 1000 && studentCount > 500 && tier.students === 1000) ||
+                (studentCount <= 500 && studentCount > 100 && tier.students === 500) ||
+                (studentCount <= 100 && tier.students === 100)
+                  ? "border-primary shadow-lg relative" 
+                  : "shadow-md hover:shadow-lg opacity-75"
               }`}
             >
               {tier.popular && (
                 <div className="absolute -top-4 left-0 right-0 mx-auto w-fit rounded-full bg-primary px-3 py-1 text-xs font-medium text-primary-foreground">
-                  Most Popular
+                  Recommended
                 </div>
               )}
               <CardContent className="p-4 sm:p-6 flex flex-col space-y-4 h-full">
                 <div className="space-y-1">
-                  <h3 className="text-xl sm:text-2xl font-bold">{tier.name}</h3>
-                  <p className="text-sm text-muted-foreground">{tier.description}</p>
+                  <h3 className="text-xl sm:text-2xl font-bold">
+                    {tier.students > 1000 ? "Enterprise" : 
+                     tier.students > 500 ? "Premium" : 
+                     tier.students > 100 ? "Standard" : "Basic"}
+                  </h3>
                 </div>
                 <div className="flex items-baseline gap-1">
                   <span className="text-2xl sm:text-3xl font-bold">{tier.price}</span>
-                  {tier.price !== "Custom" && <span className="text-muted-foreground">/month</span>}
+                  {tier.price !== "Custom" && <span className="text-muted-foreground">/mo</span>}
                 </div>
+                <p className="text-sm text-muted-foreground">
+                  {tier.students > 1000 ? "A plan based on your specific needs" : 
+                   `Up to ${formatNumber(tier.students)} students`}
+                </p>
                 <ul className="space-y-2 py-4">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-center gap-2">
@@ -84,8 +163,10 @@ export function Pricing2() {
                 </ul>
                 <Link href={tier.href} className="mt-auto w-full">
                   <Button
-                    className={`w-full ${tier.popular ? "" : "bg-primary/90 hover:bg-primary"}`}
-                    variant={tier.popular ? "default" : "outline"}
+                    className={`w-full ${
+                      tier.students === selectedTier.students ? "" : "bg-primary/90 hover:bg-primary"
+                    }`}
+                    variant={tier.students === selectedTier.students ? "default" : "outline"}
                   >
                     {tier.cta}
                   </Button>

@@ -20,10 +20,10 @@ export default function Hero2() {
               borderRadius="1.75rem"
               className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800"
             >
-              <span className='p-1 mx-1 text-sm sm:text-base'>Coaching Management Made Simple</span>
+              <span className='p-1 mx-1 text-sm sm:text-sm'>Coaching Management Made Simple</span>
             </MovingBorderButton>
             
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight mb-6">
               <span className="block">Manage your coaching</span>
               <span className="block">business <span className="text-primary"><Cover>at scale</Cover></span></span>
             </h1>
@@ -53,13 +53,8 @@ export default function Hero2() {
           alt="hero"
           width={1400}
           height={780}
-          className="mx-auto rounded-2xl object-fill h-full w-full sm:w-[90%] md:w-[85%] lg:w-full"
-          style={{
-            maxWidth: '100%',
-            height: 'auto',
-            objectFit: 'contain'
-          }}
-          sizes="(max-width: 640px) 95vw, (max-width: 768px) 90vw, (max-width: 1024px) 85vw, 1400px"
+          className="absolute inset-0 w-full h-full object-contain object-center p-2 sm:p-4"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw"
           draggable={false}
           priority
         />

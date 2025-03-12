@@ -126,11 +126,6 @@ export function Navbar() {
                   </ul>
                 </NavigationMenuContent>
               </NavigationMenuItem>
-              <NavigationMenuItem>
-                <Link href="#story" legacyBehavior passHref>
-                  <NavigationMenuLink className={navigationMenuTriggerStyle()}>Our Story</NavigationMenuLink>
-                </Link>
-              </NavigationMenuItem>
               <NavigationMenuItem className="hidden lg:block">
                 <Link href="/pricing" legacyBehavior passHref>
                   <NavigationMenuLink className={navigationMenuTriggerStyle()}>Pricing</NavigationMenuLink>
@@ -165,8 +160,6 @@ export function Navbar() {
           <div className="flex flex-col space-y-4 p-6 text-lg font-medium bg-background text-foreground border-t border-border shadow-md">
             <Link href="#institue" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Use Cases</Link>
             <Link href="#courses" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Features</Link>
-            <Link href="#themes" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Themes</Link>
-            <Link href="#story" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Our Story</Link>
             <Link href="/pricing" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Pricing</Link>
             <Link href="#about" className="border-b border-border pb-2" onClick={() => setisClick(false)}>About Us</Link>
             <Link href="#demo" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Book a Demo</Link>

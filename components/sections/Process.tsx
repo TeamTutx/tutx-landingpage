@@ -27,11 +27,11 @@ export default function Institute() {
           {points.map((point, index) => {
             const IconComponent = point.icon;
             return (
-              <div key={index} className="flex items-center rounded-lg hover:bg-slate-50 transition-colors duration-200 group">
+              <div key={index} className="flex items-center rounded-lg  transition-colors duration-200 group">
                 <div className="mr-3 p-2 rounded-full bg-primary/10 text-primary">
                   <IconComponent  size={20} />
                 </div>
-                <span className="font-medium group-hover:text-primary transition-colors duration-200">
+                <span className="font-medium transition-colors duration-200">
                   {point.text}
                 </span>
               </div>
