@@ -41,8 +41,8 @@ export default function Hero2() {
               <Button asChild variant="outline" size="lg" className="px-8 py-6 text-base">
                 <Link href="#demo">Start Free Trial</Link>
               </Button>
-              <InteractiveHoverButton  className='rounded-md' text='See Demo'> 
-              <Link href="#demo">See Demo</Link>
+              <InteractiveHoverButton  className='rounded-md' text='Book Demo'> 
+              <Link href="#contact">Book Demo</Link>
               </InteractiveHoverButton>
             </div>
           </div>

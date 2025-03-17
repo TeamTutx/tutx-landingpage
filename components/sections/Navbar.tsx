@@ -151,7 +151,7 @@ export function Navbar() {
           <div className="flex flex-col space-y-4 p-6 text-lg font-medium bg-background text-foreground border-t border-border shadow-md">
             <Link href="#institue" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Use Cases</Link>
             <Link href="#courses" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Features</Link>
-            <Link href="/pricing" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Pricing</Link>
+            <Link href="#pricing" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Pricing</Link>
             <Link href="#demo" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Book a Demo</Link>
             <Link href="/privacy-policy" className="border-b border-border pb-2" onClick={() => setisClick(false)}>Privacy Policy</Link>
             <div className="mt-4 flex justify-center">
@@ -161,11 +161,11 @@ export function Navbar() {
         </div>
       )}
 
-      <div className="animate-move-up">
+      {/* <div className="animate-move-up">
         <div className={`top-15 absolute right-10 transition-opacity duration-500 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
           <Doodle />
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }

@@ -76,7 +76,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="mx-auto my-24 flex min-h-[450px] max-w-7xl flex-col sm:px-6 md:flex-row" id="demo">
+    <div  className="mx-auto my-24 flex min-h-[450px] max-w-7xl flex-col sm:px-6 md:flex-row" id="demo">
       <div className="w-full space-y-10 p-4 text-center md:w-1/2 md:text-left">
         <div className="font-bold text-primary">BOOK A DEMO</div>
         <div className="leading-tighter text-6xl font-extrabold">

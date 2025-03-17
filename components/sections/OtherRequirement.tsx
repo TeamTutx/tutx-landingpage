@@ -55,7 +55,7 @@ export default function OtherRequirement() {
       
       {/* Right side with content */}
       <div className="w-full md:w-3/5 flex flex-col justify-center">
-        <div className="flex items-center justify-center md:justify-start text-5xl md:text-6xl font-extrabold leading-tight mb-6">
+        <div className="flex items-center justify-center md:justify-start text-5xl md:text-6xl  sm:text-3xl font-extrabold leading-tight mb-6">
           <TypewriterEffectSmooth words={words} />
         </div>
         
@@ -71,7 +71,7 @@ export default function OtherRequirement() {
               Say Hi
             </a>
             <a
-              href="tel:+1234567890"
+              href="tel:+917972057832"
               className="rounded-md border border-input bg-background dark:bg-background/30 px-8 py-4 text-lg font-medium transition-all hover:bg-accent hover:text-accent-foreground hover:scale-105 shadow-sm"
             >
               Call Us

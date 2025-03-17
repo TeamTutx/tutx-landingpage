@@ -1,6 +1,6 @@
 "use client";
 import TutxBlack from '@/components/custom/tutx';
-import { Linkedin, Mail, Heart, Instagram, Twitter, Facebook } from 'lucide-react';
+import { Linkedin, Mail, Heart, Instagram, Twitter, Facebook, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 import React from "react";
@@ -47,9 +47,7 @@ export default function Footer() {
       links: [
         { name: 'Use case', href: '#institute' },
         { name: 'Why Tutx', href: '#information' },
-        { name: 'Articles', href: '#articles' },
-        { name: 'Themes', href: '#themes' },
-        { name: 'Team', href: '#about' }
+        // { name: 'Team', href: '#about' }
       ]
     },
     {
@@ -73,8 +71,8 @@ export default function Footer() {
     {
       heading: 'Company',
       links: [
-        { name: 'About Us', href: '#about' },
-        { name: 'Our Team', href: '#story' },
+        // { name: 'About Us', href: '#about' },
+        // { name: 'Our Team', href: '#story' },
         { name: 'Contact', href: '#contact' },
         { name: 'Privacy Policy', href: '/privacy-policy' }
       ]
@@ -82,11 +80,10 @@ export default function Footer() {
   ];
 
   const socialLinks = [
-    { icon: Linkedin, href: "https://www.linkedin.com/in/sheel-taskar/", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" },
-    { icon: Instagram, href: "#", label: "Instagram" },
-    { icon: Facebook, href: "#", label: "Facebook" },
-    { icon: Mail, href: "mailto:sheeltaskar65@gmail.com", label: "Email" },
+    { icon: Linkedin, href: "https://www.linkedin.com/company/tutx-app/", label: "LinkedIn" },
+    { icon: Twitter, href: "https://x.com/singh_supril", label: "Twitter" },
+    { icon: Mail, href: "mailto:support@tutx.co.in", label: "Email" },
+    { icon: Phone, href: "tel:+917972057832", label: "Phone" },
   ];
 
   const renderFooterLinks = () => {

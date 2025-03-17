@@ -11,32 +11,32 @@ import { Slider } from '../ui/slider'
 const pricingOptions = [
   {
     students: 100,
-    price: "₹2,000",
+    price: "₹500",
     features: ["Manage Students", "Create Courses & Subjects", "Basic Fee Management", "Attendance Tracking", "Email Notifications", "Basic Analytics"],
     cta: "Get started",
-    href: "/signup",
+    href: "#demo",
   },
   {
     students: 500,
-    price: "₹3,500",
-    features: ["Everything in Basic", "Advanced Fee Management", "WhatsApp Reminders", "Advanced Filters", "Batch Management", "Enhanced Analytics", "Priority Support"],
+    price: "₹700",
+    features: ["Everything in Basic", "Advanced Fee Management", "WhatsApp Reminders", "Enhanced Analytics", "Priority Support"],
     cta: "Get started",
-    href: "/signup",
+    href: "#demo",
     popular: true,
   },
   {
     students: 1000,
-    price: "₹5,000",
-    features: ["Everything in Standard", "Advanced Reporting", "Custom Dashboards", "API Access", "Data Export", "Dedicated Support", "Custom Integrations"],
+    price: "₹1000",
+    features: ["Everything in Standard", "Advanced Reporting", "Custom Dashboards", "API Access", "Free Data Export", "Dedicated Support", "Custom Integrations"],
     cta: "Get started",
-    href: "/signup",
+    href: "#demo",
   },
   {
     students: 1001,
     price: "Custom",
     features: ["Everything in Premium", "Enterprise Support", "Dedicated Account Manager", "Custom Development", "White-labeling", "On-premise Option", "Training Sessions"],
     cta: "Contact us",
-    href: "#contact",
+    href: "#demo",
   }
 ]
 
@@ -162,13 +162,8 @@ export function Pricing2() {
                   ))}
                 </ul>
                 <Link href={tier.href} className="mt-auto w-full">
-                  <Button
-                    className={`w-full ${
-                      tier.students === selectedTier.students ? "" : "bg-primary/90 hover:bg-primary"
-                    }`}
-                    variant={tier.students === selectedTier.students ? "default" : "outline"}
-                  >
-                    {tier.cta}
+                  <Button>
+                    Contact Us
                   </Button>
                 </Link>
               </CardContent>
@@ -178,12 +173,12 @@ export function Pricing2() {
         
         <div className="mx-auto w-full sm:max-w-3xl text-center mt-8">
           <p className="text-muted-foreground text-sm sm:text-base">
-            All plans include a 14-day free trial. No credit card required. Cancel anytime. Need a custom plan for
+            All plans include a 14-day free trial. Cancel anytime. Need a custom plan for
             your specific requirements?{" "}
-            <Link href="#contact" className="font-medium text-primary hover:underline">
+            <Link href="#demo" className="font-medium text-primary hover:underline">
               Contact our sales team
-            </Link>
-            .
+            </Link>{" "}
+            at <span className="font-medium">support@tutx.co.in</span> or call us at <span className="font-medium">+91 7972057832</span>.
           </p>
         </div>
       </div>

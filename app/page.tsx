@@ -4,7 +4,7 @@ import { Navbar } from '@/components/sections/Navbar';
 import Information from '@/components/sections/Information';
 import Process from '@/components/sections/Process';
 import Dashboard from '@/components/sections/Dashboard';
-import Themes from '@/components/sections/Themes';
+import Themes from '@/components/sections/RoadMap';
 import OtherRequirement from '@/components/sections/OtherRequirement';
 
 import Tagline from '@/components/sections/Tagline';
@@ -14,6 +14,7 @@ import Courses from '@/components/sections/Courses';
 import Hero2 from '@/components/sections/Hero2';
 import Features from '@/components/sections/Features';
 import Pricing2 from '@/components/sections/Pricing2';
+import RoadMap from '@/components/sections/RoadMap';
 
 export default function Home() {
   return (
@@ -28,7 +29,7 @@ export default function Home() {
         <Payments />
         <Dashboard />
         <Courses />
-        <Themes />
+        <RoadMap />
         <OtherRequirement />
         <Pricing2 />
         {/* <About/> */}
