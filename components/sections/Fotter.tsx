@@ -1,6 +1,6 @@
 "use client";
 import TutxBlack from '@/components/custom/tutx';
-import { Linkedin, Mail, Heart, Instagram, Twitter, Facebook, Phone } from 'lucide-react';
+import { Linkedin, Mail, Heart,  Twitter, Phone } from 'lucide-react';
 import Link from 'next/link';
 
 import React from "react";

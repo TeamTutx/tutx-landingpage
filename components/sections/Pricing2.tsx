@@ -46,7 +46,7 @@ const studentMarkers = [100, 500, 1000, 2000, 3000, 4000, 5000]
 export function Pricing2() {
   const [studentCount, setStudentCount] = useState(500)
   const [selectedTier, setSelectedTier] = useState(pricingOptions[1])
-  
+  console.log(selectedTier)
   // Update the selected tier based on student count
   useEffect(() => {
     for (let i = pricingOptions.length - 1; i >= 0; i--) {

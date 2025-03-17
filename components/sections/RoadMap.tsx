@@ -1,6 +1,6 @@
 'use client';
 import { TextGenerateEffect } from '@/components/ui/text-generate-effect';
-import { useThemeContext } from '@/context/theme-data-provider';
+
 import { 
   Bell, BookOpen, Calendar, Laptop, MessageSquare, Smartphone, 
   TestTube, Users, Video, LightbulbIcon, Zap, Globe, 
@@ -12,7 +12,7 @@ import { cn } from '@/lib/utils';
 
 export default function RoadMap() {
   const words = 'Our Product Roadmap';
-  const { themeColor } = useThemeContext();
+
   const subheading = 'We\'re constantly improving our platform with new features. Here\'s what\'s coming soon:';
   
   const [notifications, setNotifications] = useState({
@@ -91,7 +91,7 @@ export default function RoadMap() {
       </div>
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 w-full max-w-7xl">
-        {features.map((feature, index) => (
+        {features.map((feature) => (
           <div 
             key={feature.id}
             className={cn(

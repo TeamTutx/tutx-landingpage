@@ -4,7 +4,7 @@ import { Navbar } from '@/components/sections/Navbar';
 import Information from '@/components/sections/Information';
 import Process from '@/components/sections/Process';
 import Dashboard from '@/components/sections/Dashboard';
-import Themes from '@/components/sections/RoadMap';
+
 import OtherRequirement from '@/components/sections/OtherRequirement';
 
 import Tagline from '@/components/sections/Tagline';

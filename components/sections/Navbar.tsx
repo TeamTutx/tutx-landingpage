@@ -18,7 +18,7 @@ import {
 } from '@/components/ui/navigation-menu';
 import RocketButton from '@/components/custom/rocket-button';
 import { useState, useEffect } from 'react';
-import Doodle from '../custom/doodle';
+
 import { ThemeToggle } from '@/components/custom/theme-toggle';
 
 const components: { title: string; href: string; description: string }[] = [
@@ -54,6 +54,7 @@ export function Navbar() {
   const [isClick, setisClick] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
 
+  console.log(isVisible)
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsVisible(false);
