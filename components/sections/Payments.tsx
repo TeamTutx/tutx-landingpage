@@ -3,7 +3,7 @@ import PaymentTabs from '../custom/payment-tabs';
 import Link from 'next/link';
 
 export default function Payments() {
-  const heading = 'Track Payments Falwlessly and Generate Receipts';
+  const heading = 'Track Payments Flawlessly and Generate Receipts';
   const subheading =
     'Track payments and fees in real time, automated invoicing to reduce manual work.';
 

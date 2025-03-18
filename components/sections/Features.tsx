@@ -84,7 +84,7 @@ export default function Features() {
         
         <div className="mt-12 text-center">
           <p className="text-sm text-muted-foreground">
-            Join hundreds of coaching institutes already transforming their operations with Tutx
+            Join, hundreds of coaching institutes already transforming their operations with Tutx
           </p>
         </div>
       </div>
