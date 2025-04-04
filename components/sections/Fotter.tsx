@@ -142,7 +142,7 @@ export default function Footer() {
               </div>
             </div>
             
-            {/* Links sections */}
+            {/*  Links sections */}
             <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 md:grid-cols-4 lg:col-span-4">
               {renderFooterLinks()}
             </div>
