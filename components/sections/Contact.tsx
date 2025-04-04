@@ -21,6 +21,7 @@ export default function Contact() {
 
     const form = event.target as HTMLFormElement;
     const formData = new FormData(form);
+    console.log('Form data is - ',formData);
     const firstName = formData.get('firstName') as string;
     const lastName = formData.get('lastName') as string;
     const email = formData.get('email') as string;

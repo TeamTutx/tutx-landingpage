@@ -137,6 +137,7 @@ export default function Footer() {
                       <social.icon strokeWidth={1.5} size={20} />
                     </Link>
                   ))}
+                 
                 </div>
               </div>
             </div>
@@ -152,8 +153,15 @@ export default function Footer() {
         <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-gray-400">
             © {new Date().getFullYear()} Tutx. All rights reserved.
+            <div className="mt-2 text-sm text-gray-400">
+                    <Link href="tel:+917972057832" className="hover:text-white transition-colors duration-200">
+                      +91 7972 057 832
+                    </Link>
+                  </div>
           </div>
           
+          
+
           <span className="text-sm text-gray-400 ml-2 flex items-center">
               Proudly made in <IndianFlag /> India
             </span>
